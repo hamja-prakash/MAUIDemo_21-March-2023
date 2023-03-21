@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.FieldModifier.FieldModifierMainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolbar="clr-namespace:MAUISampleDemo.View.FieldModifier"
+    Title="FieldModifierMainPage"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <toolbar:CommonToolbarView
+                x:Name="CommonToolbar"
+                x:FieldModifier="Private"
+                HorizontalOptions="FillAndExpand" />
+            <Image
+                x:Name="ImgDotNet"
+                Margin="0,30,0,0"
+                x:FieldModifier="Protected"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="dotnet_bot.png" />
+            <Button
+                x:Name="CounterBtn"
+                BackgroundColor="#1ABC9C"
+                Clicked="NavigateToSecondPage"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Goto Second Page"
+                TextColor="Black" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

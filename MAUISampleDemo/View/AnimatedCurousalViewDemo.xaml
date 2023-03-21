@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.AnimatedCurousalViewDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MAUISampleDemo.Helpers"
+    Title="AnimatedCurousalViewDemo">
+    <Grid
+        x:Name="rootGrid"
+        CompressedLayout.IsHeadless="True"
+        RowDefinitions="auto, *, 50, 95">
+        <Image
+            Grid.RowSpan="4"
+            Aspect="AspectFill"
+            Source="{Binding CurrentArtifact.ImageSmall}" />
+
+        <Rectangle
+            Grid.RowSpan="4"
+            Margin="-1"
+            Fill="#aa000000" />
+
+        <RoundRectangle
+            x:Name="roundRectangle"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Margin="-1,120,-1,-1"
+            Fill="#daffffff" />
+
+        <Label
+            x:Name="titleLabel"
+            Padding="6"
+            FontFamily="RalewayBold"
+            FontSize="15"
+            HorizontalOptions="Center"
+            Text="Test"
+            TextColor="White"
+            TextTransform="Uppercase"
+            VerticalOptions="End" />
+
+        <Grid
+            Grid.Row="1"
+            Margin="20,0"
+            RowDefinitions="120, 20"
+            RowSpacing="15"
+            VerticalOptions="End">
+            <Label
+                FontFamily="TenorSans"
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                MaxLines="2"
+                Text="{Binding CurrentArtifact.Title}"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Row="1"
+                FontFamily="TenorSans"
+                HorizontalOptions="Center"
+                Text="{Binding CurrentArtifact.Date}" />
+        </Grid>
+
+        <!--<CarouselView
+            x:Name="carouselView"
+            Grid.Row="1"
+            HorizontalScrollBarVisibility="Never"
+            ItemsSource="{Binding ArtifactList}"
+            PeekAreaInsets="90, 0"
+            Position="{Binding CurrentArtifactIndex, Mode=TwoWay}"
+            PropertyChanged="CarouselViewPropertyChanged"
+            Scrolled="CarouselViewScrolled"
+            VerticalScrollBarVisibility="Never">
+            <CarouselView.ItemTemplate>
+                <DataTemplate
+                    <controls:ArtifactCoverFlowItem
+                        ImageScale="{Binding ImageScale}"
+                        IsImageScaleAnimated="{Binding IsImageScaleAnimated}">
+                        <controls:ArtifactCoverFlowItem.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={RelativeSource Mode=FindAncestorBindingContext, AncestorType={x:Type vm:IWonderArtifactsPageViewModel}}, Path=ArtifactCommand}"
+                                CommandParameter="{Binding Position}"/>
+                        </controls:ArtifactCoverFlowItem.GestureRecognizers>
+                    </controls:ArtifactCoverFlowItem>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>-->
+
+        <controls:IndicatorView
+            Grid.Row="2"
+            Margin="0,0,0,10"
+            Count="{Binding CurrentWonderArtifacts.Count}"
+            CurrentIndex="{Binding CurrentArtifactIndex}"
+            HeightRequest="6"
+            VerticalOptions="Center"
+            Color="{StaticResource PrimaryColor}" />
+
+        <Border
+            Grid.Row="3"
+            Margin="20,0"
+            Style="{StaticResource RectButtonBorderStyle}"
+            VerticalOptions="Start">
+            <!--<simpleCore:ContentButton
+                Command="{Binding BrowseArtifactsCommand}"
+                Style="{StaticResource RectContentButtonStyle}">
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    Spacing="10">
+                    <Label
+                        Text="{x:Static core:Localization.artifactsButtonBrowse}"
+                        Style="{StaticResource RectButtonLabelStyle}"/>
+                    <simpleCore:Icon
+                        Source="common_icons_icon_search.png"
+                        TintColor="White"
+                        HeightRequest="20" WidthRequest="20"
+                        Margin="0, 0, 0, -2"/>
+                </HorizontalStackLayout>
+            </simpleCore:ContentButton>-->
+        </Border>
+    </Grid>
+</ContentPage>

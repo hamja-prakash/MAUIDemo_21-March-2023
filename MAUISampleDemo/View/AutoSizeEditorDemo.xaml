@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.AutoSizeEditorDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolbar="clr-namespace:MAUISampleDemo.View.FieldModifier"
+    xmlns:viewModels="clr-namespace:MAUISampleDemo.ViewModels"
+    Title="AutoSizeEditorDemo">
+    <Grid
+        Margin="0"
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <toolbar:CommonToolbarView
+            x:Name="CommonToolbar"
+            x:FieldModifier="Private"
+            HorizontalOptions="FillAndExpand" />
+
+        <Frame
+            Grid.Row="1"
+            Margin="10"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Editor
+                x:Name="edtName"
+                Margin="10,5"
+                AutoSize="TextChanges"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="enter text"
+                Text="{Binding DisplayName}"
+                VerticalOptions="FillAndExpand" />
+        </Frame>
+
+        <ListView
+            Grid.Row="2"
+            HasUnevenRows="False"
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding ClientList}"
+            SeparatorVisibility="None"
+            VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            Margin="0"
+                            Padding="5"
+                            ColumnDefinitions="50,*">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:AutoSizeViewModel}}, Path=SelectItemCommand}"
+                                CommandParameter="{Binding .}"
+                                HeightRequest="30"
+                                Source="{Binding CheckboxImg, Mode=TwoWay}"
+                                WidthRequest="30" />
+
+                            <Label
+                                Grid.Column="1"
+                                FontSize="16"
+                                HorizontalOptions="FillAndExpand"
+                                Text="{Binding Name}"
+                                VerticalOptions="CenterAndExpand" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:AutoSizeViewModel}}, Path=SelectItemCommand}"
+                                    CommandParameter="{Binding .}"
+                                    NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</ContentPage>

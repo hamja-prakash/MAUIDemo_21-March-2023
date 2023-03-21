@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopup:PopupPage
+    x:Class="MAUISampleDemo.View.MAUIPopupPageDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopup="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+    Title="MAUIPopupPageDemo"
+    BackgroundColor="#80000000"
+    CloseWhenBackgroundIsClicked="False">
+
+    <mopup:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="700"
+            EasingIn="BounceOut"
+            PositionIn="Bottom"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7" />
+    </mopup:PopupPage.Animation>
+
+    <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
+        <Border
+            BackgroundColor="White"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            WidthRequest="300">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="40,0,0,40" />
+            </Border.StrokeShape>
+            <VerticalStackLayout Margin="20" Spacing="10">
+                <Frame
+                    Margin="0"
+                    Padding="10,0"
+                    BorderColor="Gray"
+                    CornerRadius="5"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Entry
+                        x:Name="UsernameEntry"
+                        HorizontalOptions="Center"
+                        Placeholder="Username"
+                        VerticalOptions="Center" />
+                </Frame>
+
+                <Frame
+                    Margin="0"
+                    Padding="10,0"
+                    BorderColor="Gray"
+                    CornerRadius="5"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Entry
+                        x:Name="PasswordEntry"
+                        HorizontalOptions="Center"
+                        IsPassword="True"
+                        Placeholder="Password"
+                        VerticalOptions="Center" />
+                </Frame>
+
+                <Button
+                    x:Name="LoginButton"
+                    Margin="10,5"
+                    Clicked="LoginButton_Clicked"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Login"
+                    VerticalOptions="EndAndExpand" />
+            </VerticalStackLayout>
+        </Border>
+
+    </ScrollView>
+</mopup:PopupPage>

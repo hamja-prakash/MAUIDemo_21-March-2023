@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.RefreshandEmpltyViewDemoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolbar="clr-namespace:MAUISampleDemo.View.FieldModifier"
+    Title="RefreshandEmpltyViewDemoPage">
+    <Grid
+        Margin="0"
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <toolbar:CommonToolbarView
+            x:Name="CommonToolbar"
+            x:FieldModifier="Private"
+            HorizontalOptions="FillAndExpand" />
+
+        <Grid
+            Grid.Row="1"
+            Margin="20"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <RefreshView
+                Command="{Binding BindProductDataCommand}"
+                IsRefreshing="{Binding IsRefreshing}"
+                RefreshColor="Blue">
+                <CollectionView
+                    x:Name="clvProductsList"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalScrollBarVisibility="Never"
+                    ItemsSource="{Binding Products}"
+                    SelectionMode="None"
+                    VerticalOptions="FillAndExpand"
+                    VerticalScrollBarVisibility="Never">
+                    <CollectionView.EmptyView>
+                        <StackLayout Padding="100">
+                            <Image
+                                HorizontalOptions="CenterAndExpand"
+                                Source="norecord.jpg"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout
+                            HorizontalItemSpacing="10"
+                            Orientation="Vertical"
+                            Span="2"
+                            VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                Grid.Row="0"
+                                Margin="0"
+                                Padding="0"
+                                CornerRadius="15"
+                                HasShadow="true"
+                                HorizontalOptions="FillAndExpand"
+                                IsClippedToBounds="True"
+                                VerticalOptions="FillAndExpand">
+                                <Grid
+                                    Margin="0"
+                                    Padding="0"
+                                    ColumnSpacing="20"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="150" />
+                                        <RowDefinition Height="80" />
+                                    </Grid.RowDefinitions>
+
+                                    <Image
+                                        Grid.Row="0"
+                                        Margin="1"
+                                        Aspect="AspectFit"
+                                        HorizontalOptions="FillAndExpand"
+                                        Source="{Binding image}"
+                                        VerticalOptions="FillAndExpand" />
+
+                                    <Grid
+                                        Grid.Row="1"
+                                        Margin="0"
+                                        Padding="0"
+                                        BackgroundColor="LightGray"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+                                            Grid.Row="0"
+                                            Margin="5,5,0,0"
+                                            FontAttributes="Bold"
+                                            FontSize="16"
+                                            Text="{Binding price, StringFormat='{0:C}'}" />
+
+                                        <Label
+                                            Grid.Row="1"
+                                            Margin="5"
+                                            FontAttributes="None"
+                                            FontSize="12"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="2"
+                                            Text="{Binding title}" />
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ComplieBindingDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUISampleDemo.ViewModels"
+    Title="ComplieBindingDemo"
+    x:DataType="local:CompileBindingViewModel">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Label
+            FontAttributes="Bold"
+            FontSize="18"
+            HorizontalOptions="Center"
+            Text="{Binding TestText}"
+            VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

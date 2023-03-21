@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.RatingDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MAUISampleDemo.Shared;assembly=MAUISampleDemo.Shared"
+    Title="RatingDemo">
+    <VerticalStackLayout
+        Padding="36,16"
+        Spacing="12"
+        VerticalOptions="Start">
+
+        <Label FontSize="Large" Text="Default Star Shape" />
+
+        <Label
+            Margin="0,8,0,0"
+            FontSize="Micro"
+            Text="4.3 out of 5" />
+        <controls:RatingView
+            HorizontalOptions="Start"
+            ItemCount="5"
+            ItemSize="16"
+            ItemSpacing="6"
+            RatedFillColor="Yellow"
+            StrokeColor="Black"
+            StrokeWidth="1"
+            UnRatedFillColor="LightGrey"
+            Value="4.3" />
+
+        <Label FontSize="Micro" Text="4 out of 5" />
+        <controls:RatingView
+            HorizontalOptions="Start"
+            ItemCount="5"
+            ItemSize="16"
+            ItemSpacing="6"
+            RatedFillColor="Yellow"
+            StrokeColor="Black"
+            StrokeWidth="1"
+            UnRatedFillColor="LightGrey"
+            Value="4" />
+
+        <Label FontSize="Micro" Text="7.6 out of 10" />
+        <controls:RatingView
+            HorizontalOptions="Start"
+            ItemCount="10"
+            ItemSize="20"
+            ItemSpacing="6"
+            RatedFillColor="Yellow"
+            StrokeColor="LightYellow"
+            StrokeWidth="1"
+            UnRatedFillColor="LightGrey"
+            Value="7.6" />
+
+        <Label FontSize="Micro" Text="2.7 out of 5" />
+        <controls:RatingView
+            HorizontalOptions="Start"
+            ItemCount="5"
+            ItemSize="32"
+            ItemSpacing="12"
+            RatedFillColor="#336699"
+            StrokeColor="Red"
+            StrokeWidth="4"
+            UnRatedFillColor="LightGrey"
+            Value="2.7" />
+
+        <Label
+            Margin="0,16,0,0"
+            FontSize="Large"
+            Text="Custom Star Shape - Diamond" />
+
+        <Label
+            Margin="0,8,0,0"
+            FontSize="Micro"
+            Text="2.7 out of 5" />
+        <controls:RatingView
+            HorizontalOptions="Start"
+            ItemCount="5"
+            ItemSize="32"
+            ItemSpacing="12"
+            RatedFillColor="Yellow"
+            ShapePath="M5.93882 13.9336L23.0362 4.53011C23.6363 4.20002 24.3637 4.20002 24.9638 4.53011L42.0612 13.9336C43.0988 14.5043 43.4161 15.8467 42.7438 16.8215L25.6464 41.6127C24.8515 42.7654 23.1485 42.7654 22.3536 41.6127L5.25624 16.8215C4.58391 15.8467 4.90118 14.5044 5.93882 13.9336Z"
+            StrokeColor="Blue"
+            StrokeWidth="3"
+            UnRatedFillColor="LightGrey"
+            Value="2.7" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

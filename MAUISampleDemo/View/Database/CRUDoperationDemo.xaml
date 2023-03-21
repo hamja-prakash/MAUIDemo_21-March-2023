@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.Database.CRUDoperationDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CRUDoperationDemo">
+    <Grid
+        Margin="20,35,20,20"
+        Padding="0"
+        RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Entry x:Name="nameEntry" Placeholder="Enter name" />
+        <StackLayout
+            Grid.Row="1"
+            HorizontalOptions="CenterAndExpand"
+            Orientation="Horizontal"
+            Spacing="5"
+            VerticalOptions="CenterAndExpand">
+            <CheckBox x:Name="PSSPLEmployee" />
+            <Label
+                FontSize="18"
+                Text="Is PSSPL Employee"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <Button
+            Grid.Row="2"
+            Clicked="BtnSave_Clicked"
+            Text="Add to Database" />
+        <Button
+            Grid.Row="3"
+            Clicked="BtnUpdate_Clicked"
+            Text="Update Database" />
+        <Button
+            Grid.Row="4"
+            Clicked="BtnDelete_Clicked"
+            Text="Delete Database" />
+        <Button
+            Grid.Row="5"
+            Clicked="BtnEmployee_Clicked"
+            Text="Is PSSPL Employee" />
+        <Button
+            Grid.Row="6"
+            Clicked="BtnNotEmployee_Clicked"
+            Text="Is not PSSPL Employee" />
+        <CollectionView
+            x:Name="collectionView"
+            Grid.Row="7"
+            SelectionChanged="collectionView_SelectionChanged"
+            SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label FontSize="Medium" Text="{Binding Name}" />
+                        <Label
+                            FontSize="Small"
+                            Text="{Binding IsPSSPLEmployee}"
+                            TextColor="Silver" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

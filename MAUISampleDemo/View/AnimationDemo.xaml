@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.AnimationDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fontawesome="clr-namespace:MAUISampleDemo.Helpers"
+    xmlns:viewmodels="clr-namespace:MAUISampleDemo.ViewModels"
+    Title="AnimationDemo">
+    <ContentPage.BindingContext>
+        <viewmodels:AnimationViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout
+        Margin="0,30,0,0"
+        HorizontalOptions="CenterAndExpand"
+        Spacing="40"
+        VerticalOptions="FillAndExpand">
+
+        <Button
+            Command="{Binding AnimationActionCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Text="Animate" />
+
+        <!--<Button
+            Command="{Binding AnimationActionCommand}"
+            CommandParameter="{Binding Source={x:Reference LabelLoad}}"
+            Text="Animate" />-->
+
+        <Label
+            x:Name="LabelLoad"
+            FontFamily="FAS"
+            FontSize="80"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsBusy}"
+            Text="{x:Static fontawesome:FontAwesomeIcons.Spinner}" />
+    </VerticalStackLayout>
+</ContentPage>

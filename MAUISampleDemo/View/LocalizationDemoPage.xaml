@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.LocalizationDemoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:lang="clr-namespace:MAUISampleDemo.Resources.Language"
+    xmlns:local="clr-namespace:MAUISampleDemo"
+    Title="LocalizationDemoPage">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Label
+            FontSize="32"
+            HorizontalOptions="Center"
+            SemanticProperties.HeadingLevel="Level1"
+            Text="{x:Static lang:AppResources.HelloWorld}" />
+
+        <Label
+            FontSize="32"
+            HorizontalOptions="Center"
+            SemanticProperties.HeadingLevel="Level1"
+            Text="{Binding LocalizationResourceManager[HelloWorld], Mode=OneWay}" />
+
+        <Label
+            FontSize="32"
+            HorizontalOptions="Center"
+            SemanticProperties.HeadingLevel="Level1"
+            Text="{local:Translate HelloWorld}" />
+
+        <Button
+            x:Name="CounterBtn"
+            Clicked="OnCounterClicked"
+            HorizontalOptions="Center"
+            SemanticProperties.Hint="Counts the number of times you click"
+            Text="Click me" />
+    </StackLayout>
+</ContentPage>

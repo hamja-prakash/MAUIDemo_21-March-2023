@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ResponsiveLayoutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="ResponsiveLayoutPage"
+    BackgroundColor="Transparent">
+    <Grid
+        Margin="20"
+        Padding="0"
+        ColumnSpacing="0"
+        Style="{StaticResource VideoGridStyle}">
+
+        <views:MediaElement
+            x:Name="VideoPlayer"
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0"
+            HorizontalOptions="Fill"
+            ShouldAutoPlay="True"
+            ShouldKeepScreenOn="True"
+            ShouldLoopPlayback="True"
+            ShouldShowPlaybackControls="False"
+            Source="embed://BigBuckBunny.mp4" />
+
+        <StackLayout
+            HorizontalOptions="Center"
+            Orientation="Horizontal"
+            Spacing="20"
+            Style="{StaticResource ButtonStackStyle}"
+            VerticalOptions="Center">
+            <Button
+                HorizontalOptions="Center"
+                Pressed="OnPlayPressed"
+                Text="Play" />
+            <Button
+                HorizontalOptions="Center"
+                Pressed="OnPausePressed"
+                Text="Pause" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

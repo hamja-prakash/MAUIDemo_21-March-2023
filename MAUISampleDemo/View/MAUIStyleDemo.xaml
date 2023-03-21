@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.MAUIStyleDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="MAUIStyleDemo">
+
+    <VerticalStackLayout Spacing="10" VerticalOptions="CenterAndExpand">
+        <Label
+            HorizontalOptions="Center"
+            Style="{StaticResource lblStyle}"
+            Text="Hello, World!"
+            VerticalOptions="Center" />
+
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" />
+
+        <Label
+            x:Name="lblDate"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <Label
+            x:Name="lblDate1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <Label
+            x:Name="lblDate2"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <Button
+            x:Name="btnCounter"
+            Clicked="BtnClick_Clicked"
+            HeightRequest="50"
+            HorizontalOptions="CenterAndExpand"
+            Text="Click me" />
+    </VerticalStackLayout>
+</ContentPage>

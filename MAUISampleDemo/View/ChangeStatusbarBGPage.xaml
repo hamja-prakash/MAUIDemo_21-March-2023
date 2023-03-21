@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ChangeStatusbarBGPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:statusbar="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+    x:Name="ChangeStatusbarBG"
+    Title="ChangeStatusbarBGPage">
+
+    <Page.Behaviors>
+        <statusbar:StatusBarBehavior StatusBarColor="Red" />
+    </Page.Behaviors>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,30" Spacing="25">
+            <FlexLayout
+                x:Name="StackColorList"
+                AlignItems="Center"
+                BindableLayout.ItemsSource="{Binding Colors}"
+                Direction="Row"
+                FlexLayout.AlignSelf="Center"
+                HorizontalOptions="FillAndExpand"
+                JustifyContent="Center"
+                Wrap="Wrap">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button
+                            BackgroundColor="{Binding Color}"
+                            BorderColor="Transparent"
+                            BorderWidth="2"
+                            Command="{Binding BindingContext.ColorItemClickedCommand, Source={x:Reference ChangeStatusbarBG}}"
+                            CommandParameter="{Binding .}"
+                            CornerRadius="0"
+                            HeightRequest="100"
+                            WidthRequest="100">
+                            <Button.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding IsSelected}"
+                                    TargetType="Button"
+                                    Value="True">
+                                    <Setter Property="BorderColor" Value="Red" />
+                                </DataTrigger>
+                            </Button.Triggers>
+                        </Button>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+            <Button
+                x:Name="CounterBtn"
+                Command="{Binding ChangeStatusBarColorCommand}"
+                HorizontalOptions="Center"
+                Text="Change StatusBar Color" />
+
+            <!--<Button
+                x:Name="HideStatusbar"
+                Command="{Binding HideStatusBarColorCommand}"
+                HorizontalOptions="Center"
+                Text="Hide StatusBar Color" />-->
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

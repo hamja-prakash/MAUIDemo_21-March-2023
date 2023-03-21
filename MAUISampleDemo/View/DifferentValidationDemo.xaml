@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.DifferentValidationDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="DifferentValidationDemo">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0,30,10"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Source="dotnet_bot.png" />
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Number Format Validation" />
+            <Entry
+                x:Name="txtValue"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Enter number"
+                VerticalOptions="FillAndExpand" />
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Email Validation" />
+            <Entry
+                x:Name="txtEmail"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Enter email address"
+                VerticalOptions="FillAndExpand" />
+
+            <Image
+                x:Name="imgcheckemail"
+                Aspect="AspectFill"
+                HeightRequest="30"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="30" />
+
+            <AbsoluteLayout>
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="0.5,0,100,25"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Color="Blue" />
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="0,0.5,25,100"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Color="Green" />
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="1,0.5,25,100"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Color="Red" />
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="0.5,1,100,25"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Color="Black" />
+                <Label
+                    AbsoluteLayout.LayoutBounds="0.55,0.5,110,25"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="Centered text" />
+            </AbsoluteLayout>
+
+            <Button
+                Clicked="BtnCheckValidation_Clicked"
+                HorizontalOptions="FillAndExpand"
+                Text="Check Validation"
+                VerticalOptions="FillAndExpand" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

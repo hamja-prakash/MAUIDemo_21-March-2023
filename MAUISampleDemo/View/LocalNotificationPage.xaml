@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.LocalNotificationPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LocalNotificationPage">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Frame
+            x:Name="FrmLocalNtf"
+            Margin="20,0"
+            Padding="0"
+            BackgroundColor="Green"
+            CornerRadius="10"
+            HeightRequest="50"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Label
+                FontAttributes="Bold"
+                FontSize="16"
+                HorizontalOptions="CenterAndExpand"
+                Text="Send Local Notification"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmLocalNtf_Tapped" />
+            </Frame.GestureRecognizers>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

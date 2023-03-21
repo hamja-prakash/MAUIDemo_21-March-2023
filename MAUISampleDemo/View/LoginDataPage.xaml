@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.LoginDataPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolbar="clr-namespace:MAUISampleDemo.View.FieldModifier"
+    Title="LoginDataPage"
+    BackgroundColor="{StaticResource LoginBackground}">
+    <Grid
+        Margin="0"
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <toolbar:CommonToolbarView
+            x:Name="CommonToolbar"
+            x:FieldModifier="Private"
+            HorizontalOptions="FillAndExpand" />
+
+        <CollectionView
+            Grid.Row="1"
+            Margin="20"
+            HorizontalOptions="FillAndExpand"
+            HorizontalScrollBarVisibility="Never"
+            IsVisible="{Binding listVisibility}"
+            ItemsSource="{Binding StudentList}"
+            SelectionMode="None"
+            VerticalOptions="FillAndExpand"
+            VerticalScrollBarVisibility="Never">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Margin="0,10"
+                        Padding="5"
+                        BackgroundColor="{StaticResource FrameBG}"
+                        BorderColor="Gray"
+                        CornerRadius="10"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Grid
+                            Margin="5,0"
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            RowSpacing="5"
+                            VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid
+                                Grid.Row="0"
+                                Margin="0"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout
+                                    Grid.Column="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+                                    <Label
+                                        Margin="0"
+                                        Padding="0"
+                                        FontAttributes="Bold"
+                                        FontSize="18"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="First Name"
+                                        TextColor="#1ABC9C"
+                                        VerticalOptions="FillAndExpand" />
+                                    <Label
+                                        Margin="0"
+                                        Padding="0"
+                                        FontSize="16"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="{Binding FirstName}"
+                                        TextColor="White"
+                                        VerticalOptions="FillAndExpand" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    Grid.Column="1"
+                                    Margin="20,0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+                                    <Label
+                                        Margin="0"
+                                        Padding="0"
+                                        FontAttributes="Bold"
+                                        FontSize="18"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="Last Name"
+                                        TextColor="#1ABC9C"
+                                        VerticalOptions="FillAndExpand" />
+                                    <Label
+                                        Margin="0"
+                                        Padding="0"
+                                        FontSize="16"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="{Binding LastName}"
+                                        TextColor="White"
+                                        VerticalOptions="FillAndExpand" />
+                                </StackLayout>
+                            </Grid>
+
+                            <Grid
+                                Grid.Row="1"
+                                Margin="0"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout
+                                    Grid.Column="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+                                    <Label
+                                        Margin="0"
+                                        Padding="0"
+                                        FontAttributes="Bold"
+                                        FontSize="18"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="Email"
+                                        TextColor="#1ABC9C"
+                                        VerticalOptions="FillAndExpand" />
+                                    <Label
+                                        Margin="0"
+                                        Padding="0"
+                                        FontSize="16"
+                                        HorizontalOptions="FillAndExpand"
+                                        Text="{Binding EmailAddress}"
+                                        TextColor="White"
+                                        VerticalOptions="FillAndExpand" />
+                                </StackLayout>
+
+                                <!--<StackLayout
+                                    Grid.Column="1"
+                                    Margin="0,0,10,0"
+                                    HorizontalOptions="EndAndExpand"
+                                    Orientation="Horizontal"
+                                    Spacing="10"
+                                    VerticalOptions="EndAndExpand">
+                                    <ImageButton
+                                        BackgroundColor="Transparent"
+                                        HeightRequest="20"
+                                        Source="iconedit.png"
+                                        WidthRequest="20" />
+                                    <ImageButton
+                                        BackgroundColor="Transparent"
+                                        HeightRequest="20"
+                                        Source="iconremove.png"
+                                        WidthRequest="20" />
+                                </StackLayout>-->
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label
+            Grid.Row="1"
+            FontAttributes="Bold"
+            FontSize="20"
+            HorizontalOptions="CenterAndExpand"
+            IsVisible="{Binding MsgVisibility}"
+            Text="{Binding NoDataMsg}"
+            VerticalOptions="CenterAndExpand" />
+    </Grid>
+</ContentPage>

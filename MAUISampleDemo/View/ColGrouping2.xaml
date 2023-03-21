@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ColGrouping2"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ColGrouping2">
+    <VerticalStackLayout>
+        <CollectionView
+            x:Name="clvAnimals"
+            Margin="20"
+            IsGrouped="True">
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        BackgroundColor="Gray"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="{Binding Key}" />
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Margin="0,10,0,0">
+                        <Label FontAttributes="Bold" Text="{Binding Name}" />
+                        <Label
+                            FontAttributes="Italic"
+                            Text="{Binding Location}"
+                            VerticalOptions="End" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

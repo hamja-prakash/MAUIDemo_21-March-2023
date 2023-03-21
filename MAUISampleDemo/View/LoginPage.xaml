@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LoginPage">
+    <Grid
+        Margin="20"
+        HorizontalOptions="FillAndExpand"
+        RowSpacing="20"
+        VerticalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Frame
+            Margin="0"
+            Padding="5"
+            BorderColor="Gray"
+            HeightRequest="50"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Entry
+                x:Name="Email"
+                HeightRequest="40"
+                Keyboard="Email"
+                Placeholder="Email Address"
+                Text="{Binding Email, Mode=TwoWay}" />
+        </Frame>
+
+        <Frame
+            Grid.Row="1"
+            Margin="0"
+            Padding="5"
+            BorderColor="Gray"
+            HeightRequest="50"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Entry
+                x:Name="Password"
+                Grid.Row="1"
+                HeightRequest="40"
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password, Mode=TwoWay}" />
+        </Frame>
+
+        <Button
+            x:Name="loginbtn"
+            Grid.Row="2"
+            Command="{Binding LoginCommand}"
+            HorizontalOptions="FillAndExpand"
+            Text="Login" />
+    </Grid>
+</ContentPage>

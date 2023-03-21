@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.SemanticOrderViewDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="SemanticOrderViewDemo">
+    <ContentPage.Content>
+        <mct:SemanticOrderView x:Name="SemanticOrderView">
+            <Grid
+                HorizontalOptions="CenterAndExpand"
+                RowDefinitions="Auto,Auto"
+                VerticalOptions="CenterAndExpand">
+
+                <Label x:Name="DescriptionLabel" Text="This is Description" />
+
+                <Label
+                    x:Name="TitleLabel"
+                    Grid.Row="1"
+                    FontSize="30"
+                    Text="This is Title" />
+            </Grid>
+        </mct:SemanticOrderView>
+    </ContentPage.Content>
+
+    <!--<VerticalStackLayout Margin="20" Spacing="12">
+        <Label Text="SemanticOrderView allows developers to indicate the focus order of visible controls when a user is navigating via TalkBack (Android), VoiceOver (iOS) or Narrator (Windows)" />
+        <Button Text="This Button is not included in the SemanticOrderView" />
+    -->
+    <!--<mct:SemanticOrderView x:Name="SemanticOrderView">
+            <Border
+                Padding="8,0,8,8"
+                Stroke="#C0C0C0"
+                StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <VerticalStackLayout Padding="0" Spacing="6">
+                    <Label
+                        Padding="0"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="SemanticOrderView"
+                        VerticalOptions="Start"
+                        VerticalTextAlignment="Start" />
+                    <Label x:Name="Second" Text="This Label text is read 2nd by TalkBack/ VoiceOver / Narrator" />
+                    <Button x:Name="Third" Text="This Button text is read 3rd by TalkBack/ VoiceOver / Narrator" />
+                    <Label x:Name="Fourth" Text="This Label text is read 4th by TalkBack/ VoiceOver / Narrator" />
+                    <Button x:Name="Fifth" Text="This Button text is read 5th by TalkBack/ VoiceOver / Narrator" />
+                    <Button x:Name="First" Text="This Button text is read 1st by TalkBack/ VoiceOver / Narrator" />
+                </VerticalStackLayout>
+            </Border>
+        </mct:SemanticOrderView>-->
+    <!--
+    </VerticalStackLayout>-->
+</ContentPage>

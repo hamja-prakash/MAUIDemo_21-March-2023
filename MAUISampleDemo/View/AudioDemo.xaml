@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.AudioDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="AudioDemo">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Button
+            Clicked="BtnAudio_Clicked"
+            HorizontalOptions="Center"
+            Text="Play Audio"
+            VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

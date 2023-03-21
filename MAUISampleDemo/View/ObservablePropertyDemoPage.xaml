@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ObservablePropertyDemoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="ObservableProperty"
+    Title="ObservablePropertyDemoPage">
+    <Grid
+        Padding="20,5"
+        HorizontalOptions="Fill"
+        RowDefinitions="Auto,Auto"
+        RowSpacing="10"
+        VerticalOptions="Fill">
+
+        <CollectionView
+            Grid.Row="0"
+            Margin="0,30,0,0"
+            ItemsSource="{Binding EmployeeList}"
+            SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Margin="0,10"
+                        Padding="10"
+                        CornerRadius="0">
+                        <VerticalStackLayout>
+                            <StackLayout
+                                Padding="10"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    x:Name="EmployeeName"
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="FillAndExpand"
+                                    Text="{Binding EmployeeName}"
+                                    TextColor="Black" />
+                                <Frame
+                                    Padding="5"
+                                    CornerRadius="15"
+                                    HeightRequest="30"
+                                    HorizontalOptions="EndAndExpand"
+                                    WidthRequest="30">
+                                    <Image Source="icondelete.png" />
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding BindingContext.DeleteEmployeeCommand, Source={x:Reference ObservableProperty}}" CommandParameter="{Binding .}" />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                                <StackLayout.GestureRecognizers>
+                                    <DragGestureRecognizer
+                                        CanDrag="True"
+                                        DragStartingCommand="{Binding BindingContext.ItemDraggedCommand, Source={x:Reference ObservableProperty}}"
+                                        DragStartingCommandParameter="{Binding .}" />
+                                    <DropGestureRecognizer
+                                        AllowDrop="True"
+                                        DragLeaveCommand="{Binding BindingContext.ItemDragLeaveCommand, Source={x:Reference ObservableProperty}}"
+                                        DragLeaveCommandParameter="{Binding .}"
+                                        DragOverCommand="{Binding BindingContext.ItemDraggedOverCommand, Source={x:Reference ObservableProperty}}"
+                                        DragOverCommandParameter="{Binding .}"
+                                        DropCommand="{Binding BindingContext.ItemDroppedCommand, Source={x:Reference ObservableProperty}}"
+                                        DropCommandParameter="{Binding .}" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout
+                                BackgroundColor="LightGray"
+                                HeightRequest="50"
+                                HorizontalOptions="FillAndExpand"
+                                IsVisible="{Binding IsBeingDraggedOver}"
+                                VerticalOptions="FillAndExpand" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <VerticalStackLayout Grid.Row="1">
+
+            <Entry Placeholder="Type name" Text="{Binding Employee}" />
+
+            <Button
+                Margin="0,10"
+                Command="{Binding AddEmployeeCommand}"
+                HorizontalOptions="CenterAndExpand"
+                Text="Add Employee" />
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>

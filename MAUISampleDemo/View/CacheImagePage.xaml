@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.CacheImagePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CacheImagePage">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Image
+            Aspect="AspectFill"
+            HeightRequest="200"
+            WidthRequest="250">
+            <Image.Source>
+                <UriImageSource
+                    CacheValidity="01:00:05"
+                    CachingEnabled="True"
+                    Uri="https://www.cartoonbucket.com/wp-content/uploads/2015/09/Link-Cartoon-Image.jpg" />
+            </Image.Source>
+        </Image>
+    </VerticalStackLayout>
+</ContentPage>

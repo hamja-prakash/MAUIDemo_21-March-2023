@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.MusicPlayDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:MAUISampleDemo.Helpers"
+    xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+    Title="MusicPlayDemo">
+
+    <ContentPage.Resources>
+        <converters:SecondsToStringConverter x:Key="SecondsToStringConverter" />
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0,30,30"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <skia:SKLottieView
+                Grid.Row="0"
+                HeightRequest="200"
+                RepeatCount="-1"
+                RepeatMode="Restart"
+                Source="dotnetbotanimation.json"
+                WidthRequest="200" />
+
+            <Label Grid.Row="1" HorizontalOptions="Center">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}Position: {0}/{1}">
+                        <Binding Converter="{StaticResource SecondsToStringConverter}" Path="CurrentPosition" />
+                        <Binding Converter="{StaticResource SecondsToStringConverter}" Path="Duration" />
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
+
+            <Slider Maximum="{Binding Duration}" Value="{Binding CurrentPosition}" />
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button
+                    x:Name="btnPlay"
+                    BackgroundColor="Green"
+                    Command="{Binding PlayCommand}"
+                    Text="Play" />
+
+                <Button
+                    x:Name="btnPause"
+                    BackgroundColor="Blue"
+                    Command="{Binding PauseCommand}"
+                    Text="Pause" />
+
+                <Button
+                    x:Name="btnStop"
+                    BackgroundColor="Red"
+                    Command="{Binding StopCommand}"
+                    Text="Stop" />
+            </HorizontalStackLayout>
+
+            <Label Text="Volume:" />
+            <Slider
+                Maximum="1"
+                Minimum="0"
+                Value="{Binding Volume}" />
+
+
+            <Label IsVisible="{Binding CanSetSpeed}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Speed" />
+                        <Span Text="{Binding Speed, StringFormat=' ({0:F1}):'}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Slider
+                IsVisible="{Binding CanSetSpeed}"
+                Maximum="{Binding MaximumSpeed}"
+                Minimum="{Binding MinimumSpeed}"
+                Value="{Binding Speed}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
