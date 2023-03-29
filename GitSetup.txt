@@ -1,0 +1,22 @@
+- Create New Repository
+- open cmd and goto project folder path and write "dotnet new gitignore" command.
+- write git init commant (To Initialized the Git Repository)
+- write git add . command
+- write git commit -m "First Commit"
+- write git remote add origin "Repository Path" (Only one time process)
+- write git push origin master
+- write git status
+
+====================================
+If we create new branch
+
+	- git checkout -b branchname (remove -b to move to already created branch (existing branch))
+	- git add .
+	- git commit -m "tag Name"
+	- git push origin page2UIUpdate
+	- git checkout master
+	- git merge page2UIUpdate
+	- git push origin master
+
+git push origin --delete abranch -> for delete a branch
+
