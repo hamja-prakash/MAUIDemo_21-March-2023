@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ExpandableParagraphDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MAUISampleDemo.Helpers"
+    Title="ExpandableParagraphDemo">
+    <ScrollView>
+
+        <StackLayout Padding="40" VerticalOptions="CenterAndExpand">
+
+            <Label Text="Objectives" />
+            <controls:ExpandParagraphControl
+                DefaultButtonTitle="Show"
+                Text="{Binding ParagraphaText}"
+                TextColor="Gray"
+                TextFontSize="16" />
+
+            <Label Text="Vision" />
+            <controls:ExpandParagraphControl
+                DefaultButtonTitle="Show"
+                DefaultVisibleLines="5"
+                Text="{Binding ParagraphaText}"
+                TextColor="Gray"
+                TextFontSize="16" />
+
+            <Label Text="Mission" />
+            <controls:ExpandParagraphControl
+                DefaultVisibleLines="3"
+                ExpandedButtonTitle="^"
+                Text="{Binding ParagraphaText}"
+                TextColor="Gray"
+                TextFontSize="16" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

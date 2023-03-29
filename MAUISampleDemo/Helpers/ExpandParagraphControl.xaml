@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAUISampleDemo.Helpers.ExpandParagraphControl"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <StackLayout>
+                <Label
+                    x:Name="TextLabel"
+                    FontAttributes="{TemplateBinding TextFontAttributes}"
+                    FontSize="{TemplateBinding TextFontSize}"
+                    LineBreakMode="TailTruncation"
+                    MaxLines="{TemplateBinding DefaultVisibleLines}"
+                    Text="{TemplateBinding Text}"
+                    TextColor="{TemplateBinding TextColor}">
+                    <Label.Triggers>
+                        <DataTrigger
+                            Binding="{TemplateBinding IsExpanded}"
+                            TargetType="Label"
+                            Value="True">
+                            <Setter Property="LineBreakMode" Value="WordWrap" />
+                            <Setter Property="MaxLines" Value="-1" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+
+                <Button
+                    BackgroundColor="Transparent"
+                    Command="{TemplateBinding MoreCommand}"
+                    HorizontalOptions="End"
+                    Text="{TemplateBinding DefaultButtonTitle}"
+                    TextColor="DeepSkyBlue">
+                    <Button.Triggers>
+                        <DataTrigger
+                            Binding="{TemplateBinding IsExpanded}"
+                            TargetType="Button"
+                            Value="True">
+                            <Setter Property="Text" Value="{TemplateBinding ExpandedButtonTitle}" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+            </StackLayout>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>

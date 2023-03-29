@@ -57,6 +57,7 @@
 	  <None Remove="Resources\Images\dashboard_white.png" />
 	  <None Remove="Resources\Images\earth.svg" />
 	  <None Remove="Resources\Images\empty.png" />
+	  <None Remove="Resources\Images\female.svg" />
 	  <None Remove="Resources\Images\flag.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\iconBackbtn.png" />
@@ -80,11 +81,16 @@
 	  <None Remove="Resources\Images\imgsearch.png" />
 	  <None Remove="Resources\Images\jupiter.svg" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\male.svg" />
 	  <None Remove="Resources\Images\mars.svg" />
 	  <None Remove="Resources\Images\mercury.svg" />
 	  <None Remove="Resources\Images\neptune.svg" />
 	  <None Remove="Resources\Images\norecord.jpg" />
+	  <None Remove="Resources\Images\people.jpg" />
+	  <None Remove="Resources\Images\pet.png" />
 	  <None Remove="Resources\Images\profilepic.jpeg" />
+	  <None Remove="Resources\Images\radiobtncheck.png" />
+	  <None Remove="Resources\Images\radiobtnuncheck.png" />
 	  <None Remove="Resources\Images\saturn.svg" />
 	  <None Remove="Resources\Images\settings.png" />
 	  <None Remove="Resources\Images\uranus.svg" />
@@ -119,7 +125,9 @@
 	  <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
 	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
 	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
+	  <PackageReference Include="SkiaSharp.Views" Version="2.88.3" />
 	  <PackageReference Include="sqlite-net-sqlcipher" Version="1.9.141-beta" />
+	  <PackageReference Include="The49.Maui.BottomSheet" Version="1.0.0-alpha4" />
 	  <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
 	  <PackageReference Include="ZXing.Net.Maui" Version="0.3.0-preview.1" />
 	  <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.3.0-preview.1" />
@@ -141,6 +149,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Helpers\ExpandParagraphControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\AnimatedCurousalViewDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -163,6 +174,15 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\BlutoothScanningDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\BMICalculationDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\BottomsheetDemoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\BottomSheetMainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\CacheImagePage.xaml">
@@ -189,6 +209,12 @@
 	  <MauiXaml Update="View\ComplieBindingDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\ContactShareDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ConverterwithMultiPrmDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\CsharpMarkup\CsharpMarkupMainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -201,6 +227,9 @@
 	  <MauiXaml Update="View\CustomizeLoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CustomUI.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Database\CRUDoperationDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -208,6 +237,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\DifferentValidationDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ExpandableParagraphDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\FieldModifier\SecondPage.xaml">

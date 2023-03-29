@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ConverterwithMultiPrmDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:MAUISampleDemo.Helpers"
+    Title="ConverterwithMultiPrmDemo">
+    <StackLayout>
+        <Frame
+            Padding="24"
+            BackgroundColor="#2196F3"
+            CornerRadius="0">
+            <Label
+                FontSize="36"
+                HorizontalTextAlignment="Center"
+                Text="Welcome"
+                TextColor="White" />
+        </Frame>
+
+        <Label
+            x:Name="CustomerLabel"
+            Padding="16"
+            FontSize="Title"
+            Text="{Binding Name}">
+            <Label.TextColor>
+                <MultiBinding>
+                    <Binding Path="Age" />
+                    <Binding Path="Name" />
+                    <Binding Path="IsAdmin" />
+                    <MultiBinding.Converter>
+                        <converters:MultiBindingToColorConverter />
+                    </MultiBinding.Converter>
+                </MultiBinding>
+            </Label.TextColor>
+        </Label>
+
+        <Entry
+            Margin="16"
+            Placeholder="Name"
+            Text="{Binding Name}" />
+
+        <Entry
+            Margin="16"
+            Placeholder="Age"
+            Text="{Binding Age}" />
+
+        <Label Margin="16" Text="IsAdmin" />
+
+        <Switch
+            Margin="16"
+            HorizontalOptions="StartAndExpand"
+            IsToggled="{Binding IsAdmin}" />
+    </StackLayout>
+</ContentPage>

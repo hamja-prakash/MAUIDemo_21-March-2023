@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.BMICalculationDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="BMICalculationDemo">
+    <Grid
+        Margin="20,0"
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            ColumnDefinitions="*,*"
+            RowDefinitions="Auto,Auto"
+            RowSpacing="20">
+            <Label
+                Grid.ColumnSpan="2"
+                Margin="0,20,0,0"
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="GENDER"
+                TextColor="Black" />
+
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="FillAndExpand"
+                Spacing="10"
+                VerticalOptions="FillAndExpand">
+                <ImageButton
+                    x:Name="imgMale"
+                    Clicked="btnMale_Tapped"
+                    HeightRequest="25"
+                    Source="radiobtncheck.png"
+                    WidthRequest="25" />
+                <Label
+                    FontSize="16"
+                    Text="Male"
+                    TextColor="Black"
+                    VerticalTextAlignment="Center" />
+                <HorizontalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="btnMale_Tapped" />
+                </HorizontalStackLayout.GestureRecognizers>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="FillAndExpand"
+                Spacing="10"
+                VerticalOptions="FillAndExpand">
+                <ImageButton
+                    x:Name="imgFemale"
+                    Clicked="btnFemale_Tapped"
+                    HeightRequest="25"
+                    Source="radiobtnuncheck.png"
+                    WidthRequest="25" />
+                <Label
+                    FontSize="16"
+                    Text="Female"
+                    TextColor="Black"
+                    VerticalTextAlignment="Center" />
+                <HorizontalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="btnFemale_Tapped" />
+                </HorizontalStackLayout.GestureRecognizers>
+            </HorizontalStackLayout>
+
+        </Grid>
+
+        <VerticalStackLayout Grid.Row="1">
+            <Label
+                Margin="0,20,0,10"
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="HEIGHT"
+                TextColor="Black" />
+
+            <Border
+                Grid.Column="1"
+                Padding="20,10"
+                BackgroundColor="#f2a59e"
+                HorizontalOptions="Center"
+                StrokeShape="RoundRectangle 25"
+                StrokeThickness="0">
+                <Label
+                    x:Name="lblHeight"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Source={x:Reference heightSlider}, Path=Value, StringFormat='{0:F0} CM'}"
+                    TextColor="White" />
+            </Border>
+
+            <Slider
+                x:Name="heightSlider"
+                Maximum="250"
+                MaximumTrackColor="Black"
+                Minimum="100"
+                MinimumTrackColor="Black"
+                ThumbColor="Black"
+                Value="170" />
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2">
+
+            <Label
+                Margin="0,20,0,0"
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="WEIGHT"
+                TextColor="Black" />
+
+            <Border
+                Grid.Column="1"
+                Padding="20,10"
+                BackgroundColor="#f2a59e"
+                HorizontalOptions="Center"
+                StrokeShape="RoundRectangle 25"
+                StrokeThickness="0">
+                <Label
+                    x:Name="lblWeight"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Source={x:Reference weightSlider}, Path=Value, StringFormat='{0:F0} KG'}"
+                    TextColor="White" />
+            </Border>
+
+            <Slider
+                x:Name="weightSlider"
+                Maximum="150"
+                MaximumTrackColor="Black"
+                Minimum="10"
+                MinimumTrackColor="Black"
+                ThumbColor="Black"
+                Value="68" />
+
+        </VerticalStackLayout>
+
+        <Button
+            Grid.Row="3"
+            Margin="0,20,0,0"
+            Padding="0"
+            BackgroundColor="Gray"
+            Clicked="btnBMI_Clicked"
+            FontAttributes="Bold"
+            HeightRequest="40"
+            HorizontalOptions="Center"
+            Text="Calculate"
+            WidthRequest="100" />
+
+        <HorizontalStackLayout Grid.Row="4" Margin="0,20,0,0">
+            <Label
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Result : "
+                TextColor="Black" />
+            <Label
+                x:Name="lblResult"
+                FontSize="16"
+                TextColor="Black" />
+
+            <Label
+                x:Name="lblSepration"
+                FontSize="16"
+                IsVisible="false"
+                Text=" / "
+                TextColor="Black" />
+
+            <Label
+                x:Name="lblInterpretBMI"
+                FontSize="16"
+                TextColor="Black" />
+
+        </HorizontalStackLayout>
+
+        <Frame
+            Grid.Row="5"
+            Margin="0,20,0,0"
+            Padding="5,0"
+            BackgroundColor="Blue"
+            HeightRequest="40"
+            HorizontalOptions="CenterAndExpand"
+            WidthRequest="100">
+            <HorizontalStackLayout Spacing="5">
+                <Image
+                    Aspect="AspectFill"
+                    HeightRequest="25"
+                    Source="iconbackbtn.png"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="25">
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="White" />
+                    </Image.Behaviors>
+                </Image>
+
+                <Label
+                    FontSize="16"
+                    Text="Back"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+            </HorizontalStackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmBackBtn_Tapped" />
+            </Frame.GestureRecognizers>
+        </Frame>
+    </Grid>
+</ContentPage>

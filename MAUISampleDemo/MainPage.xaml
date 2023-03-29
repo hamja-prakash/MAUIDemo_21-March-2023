@@ -76,6 +76,11 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!--#region MVVM-->
@@ -1178,6 +1183,150 @@
                         VerticalOptions="CenterAndExpand" />
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmBLE_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region CustomUI-->
+                <Frame
+                    x:Name="FrmCustomUI"
+                    Grid.Row="43"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="CustomUI"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCustomUI_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region BMI Calculation-->
+                <Frame
+                    x:Name="FrmBMICalculation"
+                    Grid.Row="44"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="BMI Calculation"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmBMICalculation_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Bottomsheet-->
+                <Frame
+                    x:Name="FrmBottomsheet"
+                    Grid.Row="45"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Bottomsheet Demo"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmBottomsheet_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Expandable Paragraph-->
+                <Frame
+                    x:Name="FrmExpandableprgh"
+                    Grid.Row="46"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Expandable Paragraph"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmExpandableprgh_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Converter with Parameter-->
+                <Frame
+                    x:Name="FrmCnvWithPrm"
+                    Grid.Row="47"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Converter with Parameter"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCnvWithPrm_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Share Cotact-->
+                <Frame
+                    x:Name="FrmShareContact"
+                    Grid.Row="48"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Share Contact"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmShareContact_Tapped" />
                     </Frame.GestureRecognizers>
                 </Frame>
                 <!--#endregion-->

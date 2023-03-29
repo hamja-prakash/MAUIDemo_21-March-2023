@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.CustomUI"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CustomUI">
+    <ScrollView>
+
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+            <!--  1. Profile picture  -->
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Aspect="Fill"
+                HeightRequest="400"
+                Source="pet.png" />
+
+            <!--  2. Pet Card  -->
+            <Frame
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="20,-80,20,10"
+                BackgroundColor="#f9f9f9"
+                CornerRadius="40"
+                HasShadow="False"
+                HeightRequest="100">
+                <Grid
+                    Padding="20,5"
+                    ColumnDefinitions="Auto,*,Auto"
+                    HorizontalOptions="FillAndExpand"
+                    RowDefinitions="Auto,Auto,Auto"
+                    RowSpacing="10"
+                    VerticalOptions="Center">
+                    <!--  General information  -->
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        FontSize="21"
+                        Text="Martha"
+                        TextColor="Black" />
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Aspect="AspectFit"
+                        HeightRequest="22"
+                        HorizontalOptions="End"
+                        Source="symbol"
+                        WidthRequest="22" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        FontSize="17"
+                        Text="Border collie"
+                        TextColor="#797979" />
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Aspect="AspectFit"
+                        HeightRequest="22"
+                        HorizontalOptions="End"
+                        Source="clock"
+                        WidthRequest="22" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        FontSize="15"
+                        HorizontalTextAlignment="End"
+                        Text="1 year old"
+                        TextColor="#797979" />
+                    <Image
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        HeightRequest="22"
+                        HorizontalOptions="Start"
+                        Source="location"
+                        WidthRequest="22" />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        FontSize="15"
+                        HorizontalOptions="Center"
+                        Text="120 N 4th St, Brooklyn, NY, USA"
+                        TextColor="#acacac"
+                        TranslationX="20"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+            </Frame>
+
+            <!--  3. Details  -->
+
+            <!--  Rounded image  -->
+            <Frame
+                Grid.Row="2"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Padding="0"
+                BorderColor="White"
+                CornerRadius="35"
+                HasShadow="False"
+                HeightRequest="70"
+                HorizontalOptions="Center"
+                IsClippedToBounds="True"
+                WidthRequest="70">
+                <Image Aspect="AspectFill" Source="people.jpg" />
+            </Frame>
+
+            <!--  Main name, roles and date  -->
+            <Label
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0,30,0,0"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                Text="Harry Jones"
+                TextColor="Black" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="0,30,25,0"
+                FontSize="14"
+                HorizontalTextAlignment="End"
+                Text="24.01.2022"
+                TextColor="#acacac" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalOptions="Start"
+                Text="Owner"
+                TextColor="#acacac" />
+
+            <!--  Description  -->
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="{OnPlatform Android='35,20,35,15',
+                                    iOS='35,20,35,0'}"
+                Text="Hi! Martha has impeccable manners when I fisrt met her, most of which I've since undone. She's also become very 'chatty' with a full range of Scooby Doo noises when she doesn't feel she's getting the attention she deserves."
+                TextColor="#a5a5a5" />
+
+            <!--  Buttons  -->
+            <Button
+                x:Name="btnLike"
+                Grid.Row="5"
+                Grid.Column="0"
+                Margin="0,0,0,20"
+                BackgroundColor="White"
+                BorderColor="Silver"
+                BorderWidth="1"
+                Clicked="btnLike_Clicked"
+                CornerRadius="25"
+                HeightRequest="50"
+                HorizontalOptions="End"
+                Text="♡"
+                TextColor="Black"
+                WidthRequest="50" />
+            <Button
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="20,0,40,20"
+                BackgroundColor="#fbce56"
+                CornerRadius="22"
+                FontAttributes="Bold"
+                Text="Adoption"
+                TextColor="Black" />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

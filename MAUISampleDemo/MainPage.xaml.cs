@@ -534,6 +534,77 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private void FrmCustomUI_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCustomUI, new CustomUI());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmBMICalculation_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmBMICalculation, new BMICalculationDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+    private void FrmBottomsheet_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmBottomsheet, new BottomSheetMainPage());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmExpandableprgh_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmExpandableprgh, new ExpandableParagraphDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmCnvWithPrm_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCnvWithPrm, new ConverterwithMultiPrmDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmShareContact_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmShareContact, new ContactShareDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -566,7 +637,6 @@ public partial class MainPage : ContentPage
             var err = ex.Message;
         }
     }
-
 
     #endregion
 
