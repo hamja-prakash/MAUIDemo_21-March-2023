@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using Camera.MAUI;
 using CommunityToolkit.Maui;
 using MAUISampleDemo.Helpers;
 using MAUISampleDemo.PlatformImplementations;
@@ -28,6 +29,7 @@ public static class MauiProgram
             .UseBarcodeReader()
             .UseSkiaSharp()
             .UseMauiCommunityToolkitMediaElement()
+            .UseMauiCameraView()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

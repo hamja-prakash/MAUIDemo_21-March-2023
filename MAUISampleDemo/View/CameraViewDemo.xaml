@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.CameraViewDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="CameraViewDemo">
+    <ScrollView>
+        <VerticalStackLayout
+            Margin="20"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <cv:CameraView
+                x:Name="CameraView"
+                CamerasLoaded="CameraView_CamerasLoaded"
+                HeightRequest="300"
+                WidthRequest="300" />
+
+            <Button
+                x:Name="btnSave"
+                Margin="20"
+                Clicked="btnSave_Clicked"
+                Text="Click" />
+
+            <Border
+                HeightRequest="200"
+                HorizontalOptions="FillAndExpand"
+                Stroke="LightGray"
+                StrokeShape="RoundRectangle 10"
+                VerticalOptions="FillAndExpand"
+                WidthRequest="200">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                    <Image
+                        x:Name="imgCamera"
+                        Aspect="AspectFit"
+                        Source="noimage.png" />
+
+                    <ImageButton
+                        x:Name="imgDelete"
+                        Margin="5"
+                        BackgroundColor="Transparent"
+                        Clicked="BtnDelete_Clicked"
+                        HeightRequest="25"
+                        HorizontalOptions="EndAndExpand"
+                        IsVisible="false"
+                        Source="iconremove.png"
+                        VerticalOptions="StartAndExpand"
+                        WidthRequest="25" />
+                </Grid>
+
+            </Border>
+
+
+            <Label
+                Margin="0,20"
+                FontAttributes="Bold"
+                FontSize="22"
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="false"
+                Text="Week Days"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <CollectionView
+                x:Name="clvWeekDays"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="false"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        HorizontalItemSpacing="10"
+                        Orientation="Vertical"
+                        Span="2"
+                        VerticalItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            ColumnDefinitions="40,*"
+                            ColumnSpacing="0"
+                            HorizontalOptions="FillAndExpand">
+                            <ImageButton
+                                Aspect="AspectFit"
+                                BackgroundColor="Transparent"
+                                HeightRequest="25"
+                                Source="{Binding CheckImg, Mode=TwoWay}"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="25" />
+
+                            <Label
+                                Grid.Column="1"
+                                FontSize="16"
+                                HorizontalOptions="FillAndExpand"
+                                Text="{Binding Name}"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!--<Button
+                x:Name="btnSubmit"
+                Margin="20"
+                Clicked="btnSubmit_Clicked"
+                Text="Submit" />-->
+
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

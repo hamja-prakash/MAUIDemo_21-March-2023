@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolbar="clr-namespace:MAUISampleDemo.View.FieldModifier"
     Title="CardViewDemoPage">
+
     <ScrollView>
         <StackLayout Padding="0" Spacing="25">
 
@@ -52,6 +53,7 @@
                         Offset="10,1" />
                 </Border.Shadow>
             </Border>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

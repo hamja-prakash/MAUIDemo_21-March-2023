@@ -48,4 +48,5 @@ public partial class App : Application
         MainPage = new AppShell();
         //MainPage = new FlyoutDemo();
     }
+
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ImagewithGraphics"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUISampleDemo.Helpers"
+    Title="ImagewithGraphics">
+    <ContentPage.Resources>
+        <local:CanvaDrawSample x:Key="MyDrawable" />
+    </ContentPage.Resources>
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <GraphicsView
+            Drawable="{StaticResource MyDrawable}"
+            HeightRequest="100"
+            HorizontalOptions="CenterAndExpand"
+            WidthRequest="100" />
+    </VerticalStackLayout>
+</ContentPage>

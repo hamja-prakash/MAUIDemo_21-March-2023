@@ -605,6 +605,65 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private void FrmImagewithGraphics_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmImagewithGraphics, new ImagewithGraphics());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmCameraView_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCameraView, new CameraViewDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmEmailSMSPhoneDialer_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmEmailSMSPhoneDialer, new Email_SMS_PhoneDialerDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmCustomControl_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCustomControl, new CustomControlDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmDragandDrop_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmDragandDrop, new DragandDropDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -637,6 +696,11 @@ public partial class MainPage : ContentPage
             var err = ex.Message;
         }
     }
+
+
+
+
+
 
     #endregion
 

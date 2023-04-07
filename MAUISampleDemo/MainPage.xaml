@@ -81,6 +81,10 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!--#region MVVM-->
@@ -1330,6 +1334,127 @@
                     </Frame.GestureRecognizers>
                 </Frame>
                 <!--#endregion-->
+
+                <!--#region Image with .NET MAUI Graphics-->
+                <Frame
+                    x:Name="FrmImagewithGraphics"
+                    Grid.Row="48"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Image with .NET MAUI Graphics"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmImagewithGraphics_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region CameraView-->
+                <Frame
+                    x:Name="FrmCameraView"
+                    Grid.Row="49"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="CameraView"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCameraView_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region CameraView-->
+                <Frame
+                    x:Name="FrmEmailSMSPhoneDialer"
+                    Grid.Row="50"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Email SMS Phone Dialer"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmEmailSMSPhoneDialer_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Custom control-->
+                <Frame
+                    x:Name="FrmCustomControl"
+                    Grid.Row="51"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Custom Control"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCustomControl_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Drag & Drop-->
+                <Frame
+                    x:Name="FrmDragandDrop"
+                    Grid.Row="52"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Drag &amp; Drop"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmDragandDrop_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
 
             </Grid>
         </ScrollView>

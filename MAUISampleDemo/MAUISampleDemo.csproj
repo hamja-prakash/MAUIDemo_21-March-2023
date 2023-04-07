@@ -47,12 +47,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\cat.jpeg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Platforms\Android\TextFile.txt" />
 	  <None Remove="Resources\Fonts\fa-brands-400.ttf" />
 	  <None Remove="Resources\Fonts\fa-solid-900.ttf" />
 	  <None Remove="Resources\Fonts\OpenSans-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Sitka.ttc" />
 	  <None Remove="Resources\Images\camera.png" />
 	  <None Remove="Resources\Images\cancel.png" />
+	  <None Remove="Resources\Images\cat.jpeg" />
 	  <None Remove="Resources\Images\dashboard_black.png" />
 	  <None Remove="Resources\Images\dashboard_white.png" />
 	  <None Remove="Resources\Images\earth.svg" />
@@ -85,6 +91,7 @@
 	  <None Remove="Resources\Images\mars.svg" />
 	  <None Remove="Resources\Images\mercury.svg" />
 	  <None Remove="Resources\Images\neptune.svg" />
+	  <None Remove="Resources\Images\noimage.png" />
 	  <None Remove="Resources\Images\norecord.jpg" />
 	  <None Remove="Resources\Images\people.jpg" />
 	  <None Remove="Resources\Images\pet.png" />
@@ -106,7 +113,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <BundleResource Include="Platforms\Android\TextFile.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Images\cat.jpeg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="Acr.UserDialogs" Version="8.1.0-alpha-0009" />
+	  <PackageReference Include="Camera.MAUI" Version="1.2.1" />
 	  <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.1.0" />
 	  <PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="3.1.0" />
@@ -152,6 +168,9 @@
 	  <MauiXaml Update="Helpers\ExpandParagraphControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Helpers\LoaderControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\AnimatedCurousalViewDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -188,6 +207,9 @@
 	  <MauiXaml Update="View\CacheImagePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CameraViewDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\CardViewDemoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -221,6 +243,9 @@
 	  <MauiXaml Update="View\CustomCalender.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CustomControlDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\CustomiseControlwithHandlerDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -237,6 +262,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\DifferentValidationDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\DragandDropDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Email_SMS_PhoneDialerDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ExpandableParagraphDemo.xaml">
@@ -258,6 +289,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ImageUploadDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ImagewithGraphics.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\LocalizationDemoPage.xaml">
