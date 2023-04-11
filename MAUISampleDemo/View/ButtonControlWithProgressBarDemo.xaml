@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ButtonControlWithProgressBarDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:customControls="clr-namespace:MAUISampleDemo.Helpers"
+    xmlns:model="clr-namespace:MAUISampleDemo.Model"
+    Title="ButtonControlWithProgressBarDemo">
+    <VerticalStackLayout Margin="20" VerticalOptions="CenterAndExpand">
+
+        <customControls:OutlinedEntryControl Margin="0,20,0,0" Placeholder="First Name" />
+
+        <customControls:OutlinedEntryControl Margin="0,20,0,0" Placeholder="Last Name" />
+
+        <customControls:ButtonControl
+            x:Name="btn1"
+            Margin="0,20,0,0"
+            BackgroundColor="{StaticResource Primary}"
+            HorizontalOptions="Center"
+            Tapped="btn1_Tapped"
+            Text="Click me" />
+
+        <customControls:ButtonControl
+            Margin="0,20,0,0"
+            Command="{Binding ButtonClickCommand}"
+            HorizontalOptions="Center"
+            IsInProgress="{Binding IsBusy}"
+            Text="{Binding ButtonText}" />
+
+        <Label
+            Grid.Row="1"
+            Margin="0,20,0,0"
+            FontFamily="FaBrands"
+            FontSize="50"
+            HorizontalOptions="Center"
+            Text="{x:Static model:FaBrands.GooglePay}" />
+
+    </VerticalStackLayout>
+</ContentPage>

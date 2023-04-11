@@ -664,6 +664,31 @@ public partial class MainPage : ContentPage
             var err = ex.Message;
         }
     }
+
+    private void FrmBtnWithProgressbar_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmBtnWithProgressbar, new ButtonControlWithProgressBarDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmEmailAuth_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmEmailAuth, new EmailAuthDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+
+    }
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -696,10 +721,6 @@ public partial class MainPage : ContentPage
             var err = ex.Message;
         }
     }
-
-
-
-
 
 
     #endregion

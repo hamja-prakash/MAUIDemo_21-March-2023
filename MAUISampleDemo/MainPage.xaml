@@ -85,6 +85,8 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!--#region MVVM-->
@@ -1407,34 +1409,10 @@
                 </Frame>
                 <!--#endregion-->
 
-                <!--#region Custom control-->
-                <Frame
-                    x:Name="FrmCustomControl"
-                    Grid.Row="51"
-                    Margin="20,0"
-                    Padding="0"
-                    BackgroundColor="Green"
-                    CornerRadius="10"
-                    HeightRequest="50"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand">
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="16"
-                        HorizontalOptions="CenterAndExpand"
-                        Text="Custom Control"
-                        TextColor="White"
-                        VerticalOptions="CenterAndExpand" />
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCustomControl_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-                <!--#endregion-->
-
                 <!--#region Drag & Drop-->
                 <Frame
                     x:Name="FrmDragandDrop"
-                    Grid.Row="52"
+                    Grid.Row="51"
                     Margin="20,0"
                     Padding="0"
                     BackgroundColor="Green"
@@ -1455,6 +1433,77 @@
                 </Frame>
                 <!--#endregion-->
 
+                <!--#region Custom control-->
+                <Frame
+                    x:Name="FrmCustomControl"
+                    Grid.Row="52"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Custom Control"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCustomControl_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Button Control with Progressbar-->
+                <Frame
+                    x:Name="FrmBtnWithProgressbar"
+                    Grid.Row="53"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Button Control with Progressbar"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmBtnWithProgressbar_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Email Auth-->
+                <Frame
+                    x:Name="FrmEmailAuth"
+                    Grid.Row="54"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Email Auth"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmEmailAuth_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
 
             </Grid>
         </ScrollView>
