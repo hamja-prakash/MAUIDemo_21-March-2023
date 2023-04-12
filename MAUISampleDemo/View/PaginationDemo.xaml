@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.PaginationDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MAUISampleDemo.Helpers"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="PaginationDemo">
+
+    <Grid
+        Margin="0"
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        RowDefinitions="Auto,*"
+        VerticalOptions="FillAndExpand">
+
+        <HorizontalStackLayout
+            Margin="0,10"
+            HorizontalOptions="CenterAndExpand"
+            Spacing="0"
+            VerticalOptions="FillAndExpand">
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                Text="{Binding LoadRecords}"
+                TextColor="{StaticResource FrameBG}" />
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                Text=" / "
+                TextColor="{StaticResource FrameBG}" />
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                Text="{Binding TotalRecords}"
+                TextColor="{StaticResource FrameBG}" />
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                Text=" records "
+                TextColor="{StaticResource FrameBG}" />
+        </HorizontalStackLayout>
+
+        <CollectionView
+            x:Name="clvEntries"
+            Grid.Row="1"
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding EntriesList}"
+            RemainingItemsThreshold="1"
+            RemainingItemsThresholdReachedCommand="{Binding LoadMoreDataCommand}"
+            VerticalOptions="FillAndExpand">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Margin="10"
+                        Padding="10,5"
+                        BackgroundColor="Transparent"
+                        Stroke="Gray"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10,10,10,10" />
+                        </Border.StrokeShape>
+                        <VerticalStackLayout
+                            HorizontalOptions="FillAndExpand"
+                            Spacing="5"
+                            VerticalOptions="FillAndExpand">
+
+                            <!--#region API-->
+                            <VerticalStackLayout
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="0"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    Text="API : "
+                                    TextColor="{StaticResource FrameBG}" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="14"
+                                    Text="{Binding API}" />
+                            </VerticalStackLayout>
+                            <!--#endregion-->
+
+                            <!--#region Description-->
+                            <VerticalStackLayout
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="0"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    Text="Description : "
+                                    TextColor="{StaticResource FrameBG}" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="14"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Text="{Binding Description}" />
+                            </VerticalStackLayout>
+                            <!--#endregion-->
+
+                            <!--#region Category-->
+                            <VerticalStackLayout
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="0"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    Text="Category : "
+                                    TextColor="{StaticResource FrameBG}" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="14"
+                                    Text="{Binding Category}" />
+                            </VerticalStackLayout>
+                            <!--#endregion-->
+
+                            <!--#region Link-->
+                            <VerticalStackLayout
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="0"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    Text="Link : "
+                                    TextColor="{StaticResource FrameBG}" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="14"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="2"
+                                    Text="{Binding Link}" />
+                            </VerticalStackLayout>
+                            <!--#endregion-->
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Footer>
+                <ActivityIndicator
+                    IsRunning="True"
+                    IsVisible="{Binding IsLoadMoreData}"
+                    VerticalOptions="EndAndExpand" />
+            </CollectionView.Footer>
+        </CollectionView>
+
+        <controls:LoaderControl
+            x:Name="GrdLoader"
+            Grid.Row="1"
+            IndicatorColor="Black"
+            IsVisible="{Binding IsLoad}"
+            LoaderText="Please Wait.."
+            VerticalOptions="CenterAndExpand" />
+    </Grid>
+
+</ContentPage>

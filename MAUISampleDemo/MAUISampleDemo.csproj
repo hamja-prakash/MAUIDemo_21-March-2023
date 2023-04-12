@@ -133,6 +133,7 @@
 	  <PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.1" />
 	  <PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.1" />
 	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.0-preview.1.7762" />
+	  <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
 	  <PackageReference Include="Mopups" Version="1.1.1" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	  <PackageReference Include="Plugin.BLE" Version="3.0.0-beta.2" />
@@ -354,6 +355,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ObservablePropertyDemoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\PaginationDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\PlanetsPage.xaml">

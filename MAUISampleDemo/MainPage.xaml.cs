@@ -687,8 +687,20 @@ public partial class MainPage : ContentPage
         {
             var err = ex.Message;
         }
-
     }
+
+    private void FrmPagination_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmPagination, new PaginationDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -721,6 +733,7 @@ public partial class MainPage : ContentPage
             var err = ex.Message;
         }
     }
+
 
 
     #endregion

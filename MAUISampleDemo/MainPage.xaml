@@ -87,6 +87,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!--#region MVVM-->
@@ -1501,6 +1502,30 @@
                         VerticalOptions="CenterAndExpand" />
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmEmailAuth_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Pagination-->
+                <Frame
+                    x:Name="FrmPagination"
+                    Grid.Row="55"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Pagination Demo"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmPagination_Tapped" />
                     </Frame.GestureRecognizers>
                 </Frame>
                 <!--#endregion-->

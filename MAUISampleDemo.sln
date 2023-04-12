@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUISampleDemo", "MAUISampl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUISampleDemo.Shared", "MAUISampleDemo.Shared\MAUISampleDemo.Shared.csproj", "{C2B11C24-E6B2-47F0-BE6B-4BF2D66B8848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{24BFB3DB-E1F9-4CDF-9672-3F9C59A672A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{24BFB3DB-E1F9-4CDF-9672-3F9C59A672A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

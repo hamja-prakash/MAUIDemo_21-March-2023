@@ -31,7 +31,7 @@ namespace MAUISampleDemo.ViewModels
             }
         }
 
-        public Command RegisterUser { get; }
+        public Command RegisterUser { get; set; }
 
         public EmailAuthRegisterViewModel()
         {
@@ -60,7 +60,7 @@ namespace MAUISampleDemo.ViewModels
         }
 
 
-        private async void RegisterUserTappedAsync(object obj)
+        private async void RegisterUserTappedAsync()
         {
             try
             {

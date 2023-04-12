@@ -12,8 +12,8 @@ namespace MAUISampleDemo.ViewModels
         private string userName;
         private string userPassword;
 
-        public Command RegisterBtn { get; }
-        public Command LoginBtn { get; }
+        public Command RegisterBtn { get; set; }
+        public Command LoginBtn { get; set; }
 
         public string UserName
         {
@@ -53,7 +53,7 @@ namespace MAUISampleDemo.ViewModels
             return isValid;
         }
 
-        private async void LoginBtnTappedAsync(object obj)
+        private async void LoginBtnTappedAsync()
         {
             try
             {
@@ -77,9 +77,16 @@ namespace MAUISampleDemo.ViewModels
             }
         }
 
-        private async void RegisterBtnTappedAsync(object obj)
+        private async void RegisterBtnTappedAsync()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new EmailAuthRegisterPage());
+            try
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new EmailAuthRegisterPage());
+            }
+            catch (Exception ex)
+            {
+                var err = ex.Message;
+            }
         }
 
         protected virtual void OnPropertyChanged(string propertyName)
