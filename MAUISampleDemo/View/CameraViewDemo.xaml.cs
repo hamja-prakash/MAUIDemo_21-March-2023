@@ -27,13 +27,16 @@ public partial class CameraViewDemo : ContentPage
     {
         try
         {
-            //CameraView.Camera = CameraView.Cameras.Where(x => x.Name.ToLower().Equals(FrontCamera.ToLower())).FirstOrDefault();
-            CameraView.Camera = CameraView.Cameras.First();
-            MainThread.BeginInvokeOnMainThread(async () =>
+            if (CameraView.Cameras.Count > 0)
             {
-                await CameraView.StopCameraAsync();
-                await CameraView.StartCameraAsync();
-            });
+                //CameraView.Camera = CameraView.Cameras.First();
+                CameraView.Camera = CameraView.Cameras.Where(x => x.Name.ToLower().Equals(BackCamera.ToLower())).FirstOrDefault();
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    await CameraView.StopCameraAsync();
+                    await CameraView.StartCameraAsync();
+                });
+            }
         }
         catch (Exception ex)
         {
@@ -69,6 +72,14 @@ public partial class CameraViewDemo : ContentPage
         {
             var err = ex.Message;
         }
+    }
+
+    private void CameraView_BarcodeDetected(object sender, Camera.MAUI.ZXingHelper.BarcodeEventArgs args)
+    {
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            lblBarcodeResult.Text = $"{args.Result[0].BarcodeFormat}: {args.Result[0].Text}";
+        });
     }
 
     //public void BindWeekDayData()

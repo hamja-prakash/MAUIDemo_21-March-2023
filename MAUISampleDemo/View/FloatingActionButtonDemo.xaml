@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.FloatingActionButtonDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FloatingActionButtonDemo">
+    <Grid Margin="20">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout Orientation="Vertical">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+                    VerticalOptions="Center" />
+
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+                    VerticalOptions="Center" />
+            </StackLayout>
+        </ScrollView>
+
+        <VerticalStackLayout
+            x:Name="fabBtnsContainer"
+            Margin="0,0,-100,50"
+            HorizontalOptions="EndAndExpand"
+            Spacing="5"
+            VerticalOptions="EndAndExpand">
+            <Button Text="Link1" />
+            <Button Text="Link2" />
+            <Button Text="Link3" />
+            <Button Text="Link4" />
+            <Button Text="Link5" />
+        </VerticalStackLayout>
+
+        <Button
+            x:Name="fabBtn"
+            Clicked="fabBtn_Clicked"
+            HorizontalOptions="EndAndExpand"
+            Text="Btn"
+            VerticalOptions="EndAndExpand" />
+
+        <!--<Button
+            x:Name="fabBtn"
+            Command="{Binding BtnClickCommand}"
+            CommandParameter="{Binding Source={x:Reference fabBtn}}"
+            HorizontalOptions="EndAndExpand"
+            Text="Fab"
+            VerticalOptions="EndAndExpand" />-->
+    </Grid>
+</ContentPage>

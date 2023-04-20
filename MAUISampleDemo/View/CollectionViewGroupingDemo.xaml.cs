@@ -20,4 +20,5 @@ public partial class CollectionViewGroupingDemo : ContentPage
         await FrmOption2.ScaleTo(1.0, 100, Easing.Linear);
         Navigation.PushAsync(new ColGrouping2());
     }
+
 }

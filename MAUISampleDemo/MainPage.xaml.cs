@@ -701,6 +701,53 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private void FrmFlAcBtn_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmFlAcBtn, new FloatingActionButtonDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmCustomPicker_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCustomPicker, new CustomPickerControlDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmWebview_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmWebview, new WebviewDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmExpColClvGrp_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmExpColClvGrp, new ExpandandCollapseClvGroupDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -736,8 +783,9 @@ public partial class MainPage : ContentPage
 
 
 
-    #endregion
 
-    
+
+
+    #endregion
 }
 

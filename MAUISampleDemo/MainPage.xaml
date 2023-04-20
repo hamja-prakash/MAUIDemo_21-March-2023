@@ -88,6 +88,9 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!--#region MVVM-->
@@ -1526,6 +1529,102 @@
                         VerticalOptions="CenterAndExpand" />
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmPagination_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Floating Action Button-->
+                <Frame
+                    x:Name="FrmFlAcBtn"
+                    Grid.Row="56"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Floating Action Button"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmFlAcBtn_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region CustomPicker-->
+                <Frame
+                    x:Name="FrmCustomPicker"
+                    Grid.Row="57"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="CustomPicker"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmCustomPicker_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Webview-->
+                <Frame
+                    x:Name="FrmWebview"
+                    Grid.Row="58"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Webview Demo"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmWebview_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Expand & Collapse CollectionView Group-->
+                <Frame
+                    x:Name="FrmExpColClvGrp"
+                    Grid.Row="59"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Expand &amp; Collapse CollectionView Group"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmExpColClvGrp_Tapped" />
                     </Frame.GestureRecognizers>
                 </Frame>
                 <!--#endregion-->

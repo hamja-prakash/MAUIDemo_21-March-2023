@@ -20,7 +20,6 @@ public partial class App : Application
             {
                 database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "people_encrypted.db3"));
             }
-
             return database;
         }
     }
@@ -45,6 +44,7 @@ public partial class App : Application
             handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
 #endif
         });
+
         MainPage = new AppShell();
         //MainPage = new FlyoutDemo();
     }

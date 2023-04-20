@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.ExpandandCollapseClvGroupDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MAUISampleDemo.Model"
+    xmlns:viewModels="clr-namespace:MAUISampleDemo.ViewModels"
+    Title="ExpandandCollapseClvGroupDemo">
+    <ScrollView>
+        <Grid
+            Margin="10,0,10,0"
+            RowDefinitions="Auto,*"
+            VerticalOptions="FillAndExpand">
+
+            <Label
+                Grid.Row="0"
+                FontSize="28"
+                Text="Grouped Data Demo" />
+
+            <CollectionView
+                Grid.Row="1"
+                IsGrouped="True"
+                ItemsSource="{Binding Teachers}"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.GroupHeaderTemplate>
+                    <DataTemplate x:DataType="models:TeacherGroup">
+                        <HorizontalStackLayout Spacing="5">
+                            <Image
+                                HeightRequest="20"
+                                Source="{Binding GroupIcon}"
+                                VerticalOptions="Center"
+                                WidthRequest="20" />
+                            <Label FontSize="28" Text="{Binding GroupTitle}" />
+                            <HorizontalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:TeacherViewModel}}, Path=AddOrRemoveGroupDataCommand}" CommandParameter="{Binding .}" />
+                            </HorizontalStackLayout.GestureRecognizers>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.GroupHeaderTemplate>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Teacher">
+                        <Frame Margin="0,10" Padding="10">
+                            <Label
+                                FontSize="16"
+                                Text="{Binding FullName}"
+                                VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <!--<CollectionView.GroupFooterTemplate>
+                <DataTemplate x:DataType="models:EmployeeGroup">
+                    <Label Text="{Binding FooterTitle}" FontSize="22" BackgroundColor="LightBlue"/>
+                </DataTemplate>
+            </CollectionView.GroupFooterTemplate>-->
+            </CollectionView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -11,8 +11,18 @@
             Margin="20"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
+
+            <Label
+                x:Name="lblBarcodeResult"
+                Margin="0,20"
+                FontAttributes="Bold"
+                FontSize="22"
+                TextColor="Black" />
+
             <cv:CameraView
                 x:Name="CameraView"
+                BarCodeDetectionEnabled="True"
+                BarcodeDetected="CameraView_BarcodeDetected"
                 CamerasLoaded="CameraView_CamerasLoaded"
                 HeightRequest="300"
                 WidthRequest="300" />
@@ -51,7 +61,6 @@
                 </Grid>
 
             </Border>
-
 
             <Label
                 Margin="0,20"

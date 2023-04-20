@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.CustomPickerControlDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:customControls="clr-namespace:MAUISampleDemo.Helpers"
+    xmlns:models="clr-namespace:MAUISampleDemo.Model"
+    Title="CustomPickerControlDemo">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Label Text="{Binding CurrentItem.Title}" />
+
+            <customControls:DropDownButton
+                x:Name="dropdownControl"
+                CurrentItem="{Binding CurrentItem}"
+                DisplayMember="Title"
+                IsDisplayPickerControl="{Binding IsDisplayPicker}"
+                IsLoading="{Binding IsLoading}"
+                ItemSource="{Binding Items}"
+                OpenPickerCommand="{Binding OpenPickerCommand}"
+                PickerHeightRequest="300"
+                Placeholder="--Select Item--">
+                <customControls:DropDownButton.ItemTemplate>
+                    <DataTemplate x:DataType="models:TitleValue">
+                        <HorizontalStackLayout Spacing="10">
+                            <Image
+                                HeightRequest="20"
+                                Source="dotnet_bot.png"
+                                WidthRequest="20" />
+                            <Label
+                                Padding="0,5,0,5"
+                                FontSize="18"
+                                Text="{Binding Title}" />
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </customControls:DropDownButton.ItemTemplate>
+            </customControls:DropDownButton>
+
+            <customControls:DropDownButton
+                x:Name="dropdownControl1"
+                CurrentItem="{Binding CurrentItem1}"
+                DisplayMember="Title"
+                IsDisplayPickerControl="{Binding IsDisplayPicker1}"
+                IsLoading="{Binding IsLoading1}"
+                ItemSource="{Binding Items1}"
+                OpenPickerCommand="{Binding OpenPicker1Command}"
+                PickerHeightRequest="300"
+                Placeholder="--Select Item--">
+                <customControls:DropDownButton.ItemTemplate>
+                    <DataTemplate x:DataType="models:TitleValue">
+                        <HorizontalStackLayout Spacing="10">
+                            <Image
+                                HeightRequest="20"
+                                Source="dotnet_bot.png"
+                                WidthRequest="20" />
+                            <Label
+                                Padding="0,5,0,5"
+                                FontSize="18"
+                                Text="{Binding Title}" />
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </customControls:DropDownButton.ItemTemplate>
+            </customControls:DropDownButton>
+
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="dotnet_bot.png" />
+
+            <Label
+                FontSize="32"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Hello, World!" />
+
+            <Label
+                FontSize="18"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level2"
+                Text="Welcome to .NET Multi-platform App UI" />
+
+            <Button
+                x:Name="CounterBtn"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Click me" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
