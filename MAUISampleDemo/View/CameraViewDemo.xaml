@@ -13,7 +13,7 @@
             VerticalOptions="FillAndExpand">
 
             <Label
-                x:Name="lblBarcodeResult"
+                x:Name="lblBarcodeScanResult"
                 Margin="0,20"
                 FontAttributes="Bold"
                 FontSize="22"
@@ -61,6 +61,18 @@
                 </Grid>
 
             </Border>
+
+            <cv:BarcodeImage
+                Margin="0,20"
+                Barcode="This is testing 123"
+                BarcodeBackground="White"
+                BarcodeForeground="Blue"
+                BarcodeFormat="QR_CODE"
+                BarcodeHeight="200"
+                BarcodeMargin="5"
+                BarcodeWidth="200"
+                HeightRequest="200"
+                WidthRequest="200" />
 
             <Label
                 Margin="0,20"

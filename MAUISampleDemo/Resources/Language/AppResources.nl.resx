@@ -123,4 +123,10 @@
   <data name="HelloWorld" xml:space="preserve">
     <value>Hallo, Wereld!</value>
   </data>
+  <data name="Title1" xml:space="preserve">
+    <value>Hallo hoe is het!</value>
+  </data>
+  <data name="Title2" xml:space="preserve">
+    <value>Dit is .Net MAUI</value>
+  </data>
 </root>

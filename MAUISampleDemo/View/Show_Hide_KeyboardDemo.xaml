@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.Show_Hide_KeyboardDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Show_Hide_KeyboardDemo">
+    <ScrollView>
+        <VerticalStackLayout
+            Margin="20"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand">
+            <Button
+                Clicked="BtnShowHideKeyboard_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Show/Hide Keyboard"
+                VerticalOptions="FillAndExpand" />
+
+            <Entry
+                x:Name="Ent1"
+                HorizontalOptions="CenterAndExpand"
+                Text="Welcome to .NET MAUI!" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

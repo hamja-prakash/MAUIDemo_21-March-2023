@@ -124,9 +124,10 @@
 
 	<ItemGroup>
 	  <PackageReference Include="Acr.UserDialogs" Version="8.1.0-alpha-0009" />
+	  <PackageReference Include="BarcodeScanner.Mobile.Maui" Version="6.3.0.25-pre" />
 	  <PackageReference Include="Camera.MAUI" Version="1.2.1" />
 	  <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.1.0" />
-	  <PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.1.0" />
 	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="3.1.0" />
 	  <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.2" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
@@ -204,7 +205,10 @@
 	  <MauiXaml Update="View\BarcodeGenerateDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\BarcodeScanner.xaml">
+	  <MauiXaml Update="View\BarcodeScannerDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\BarcodeScannerwithGoogleVisionDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\BiometricsAuthDemo.xaml">
@@ -253,6 +257,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ContactShareDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ContextandMenuActioninListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ConverterwithMultiPrmDemo.xaml">
@@ -333,6 +340,12 @@
 	  <MauiXaml Update="View\ImagewithGraphics.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\LazyView\LazyViewDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\LazyView\MyView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\LocalizationDemoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -355,6 +368,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\MetroLogDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\MultiLanguageLocalizationDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\MusicPlayDemo.xaml">
@@ -400,6 +416,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\SemanticOrderViewDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Show_Hide_KeyboardDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SkeletonEffectDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\StateContainerViewDemo.xaml">

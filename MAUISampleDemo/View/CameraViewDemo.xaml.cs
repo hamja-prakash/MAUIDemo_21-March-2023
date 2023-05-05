@@ -76,11 +76,19 @@ public partial class CameraViewDemo : ContentPage
 
     private void CameraView_BarcodeDetected(object sender, Camera.MAUI.ZXingHelper.BarcodeEventArgs args)
     {
-        MainThread.BeginInvokeOnMainThread(() =>
+        try
         {
-            lblBarcodeResult.Text = $"{args.Result[0].BarcodeFormat}: {args.Result[0].Text}";
-        });
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                lblBarcodeScanResult.Text = $"{args.Result[0].BarcodeFormat}: {args.Result[0].Text}";
+            });
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
     }
+
 
     //public void BindWeekDayData()
     //{

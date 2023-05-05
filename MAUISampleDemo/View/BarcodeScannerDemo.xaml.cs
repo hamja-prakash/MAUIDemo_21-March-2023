@@ -1,9 +1,9 @@
 namespace MAUISampleDemo.View;
 
-public partial class BarcodeScanner : ContentPage
+public partial class BarcodeScannerDemo : ContentPage
 {
-	public BarcodeScanner()
-	{
+	public BarcodeScannerDemo()
+    {
         try
         {
             InitializeComponent();
@@ -24,10 +24,10 @@ public partial class BarcodeScanner : ContentPage
         try
         {
             Dispatcher.Dispatch(() =>
-           {
-               barcodeResult.Text = (!string.IsNullOrEmpty(e.Results[0].Value)) ? e.Results[0].Value : string.Empty;
-               barcodeType.Text = (!string.IsNullOrEmpty(e.Results[0].Format.ToString())) ? e.Results[0].Format.ToString() : string.Empty;
-           });
+            {
+                barcodeResult.Text = (!string.IsNullOrEmpty(e.Results[0].Value)) ? e.Results[0].Value : string.Empty;
+                barcodeType.Text = (!string.IsNullOrEmpty(e.Results[0].Format.ToString())) ? e.Results[0].Format.ToString() : string.Empty;
+            });
         }
         catch (Exception ex)
         {

@@ -77,5 +77,23 @@ namespace MAUISampleDemo.Resources.Language {
                 return ResourceManager.GetString("HelloWorld", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hello, How are you!.
+        /// </summary>
+        internal static string Title1 {
+            get {
+                return ResourceManager.GetString("Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is .Net MAUI.
+        /// </summary>
+        internal static string Title2 {
+            get {
+                return ResourceManager.GetString("Title2", resourceCulture);
+            }
+        }
     }
 }

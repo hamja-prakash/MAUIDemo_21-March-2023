@@ -1,6 +1,8 @@
 ﻿using Acr.UserDialogs;
+using BarcodeScanner.Mobile;
 using Camera.MAUI;
 using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Core;
 using MAUISampleDemo.Helpers;
 using MAUISampleDemo.PlatformImplementations;
 using MAUISampleDemo.View;
@@ -26,6 +28,7 @@ public static class MauiProgram
             .UseLocalNotification()
             .ConfigureMopups()
             .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkitCore()
             .UseBarcodeReader()
             .UseSkiaSharp()
             .UseMauiCommunityToolkitMediaElement()
@@ -48,8 +51,9 @@ public static class MauiProgram
 
         .ConfigureMauiHandlers(h =>
         {
+            h.AddBarcodeScannerHandler();
             h.AddHandler(typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView), typeof(CameraBarcodeReaderViewHandler));
-            h.AddHandler(typeof(ZXing.Net.Maui.Controls.CameraView), typeof(CameraViewHandler));
+            h.AddHandler(typeof(ZXing.Net.Maui.Controls.CameraView), typeof(ZXing.Net.Maui.CameraViewHandler));
             h.AddHandler(typeof(ZXing.Net.Maui.Controls.BarcodeGeneratorView), typeof(BarcodeGeneratorViewHandler));
         }).UseMauiCommunityToolkit();
 
@@ -60,7 +64,7 @@ public static class MauiProgram
                 typeof(Analytics), typeof(Crashes));
 
         builder.Services.AddSingleton<IConnectivity>((e) => Connectivity.Current);
-        builder.Services.AddSingleton<IToast>((e) => new Toaster());
+        builder.Services.AddSingleton<Helpers.IToast>((e) => new Toaster());
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddSingleton<MainPageViewModel>();
         builder.Services.AddSingleton<NavPage1>();

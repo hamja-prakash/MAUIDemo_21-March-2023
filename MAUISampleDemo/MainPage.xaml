@@ -91,6 +91,13 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <!--#region MVVM-->
@@ -1625,6 +1632,150 @@
                         VerticalOptions="CenterAndExpand" />
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmExpColClvGrp_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region LazyView-->
+                <Frame
+                    x:Name="FrmLazyView"
+                    Grid.Row="60"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="LazyView Demo"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmLazyView_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region LazyView-->
+                <Frame
+                    x:Name="FrmBarcodeScnviaGoogleVision"
+                    Grid.Row="61"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Barcode Scanning via GoogleVision"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmBarcodeScnviaGoogleVision_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Multiple Language Localization-->
+                <Frame
+                    x:Name="FrmMultiLocalization"
+                    Grid.Row="62"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Multiple Localization"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmMultiLocalization_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Context and Menu Action in ListView-->
+                <Frame
+                    x:Name="FrmContextandMenuAcninlst"
+                    Grid.Row="63"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Context and Menu Action in ListView"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmContextandMenuAcninlst_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Show/Hide Keyboard-->
+                <Frame
+                    x:Name="FrmShowHideKeyboard"
+                    Grid.Row="65"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Show/Hide Keyboard"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmShowHideKeyboard_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Skeleton Effect-->
+                <Frame
+                    x:Name="FrmSkeletonEffect"
+                    Grid.Row="64"
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="Green"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Skeleton Effect"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmSkeletonEffect_Tapped" />
                     </Frame.GestureRecognizers>
                 </Frame>
                 <!--#endregion-->

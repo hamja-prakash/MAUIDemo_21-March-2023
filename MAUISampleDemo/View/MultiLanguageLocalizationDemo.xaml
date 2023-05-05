@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.MultiLanguageLocalizationDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extension="clr-namespace:MAUISampleDemo.Helpers"
+    Title="MultiLanguageLocalizationDemo">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Label
+            FontAttributes="Bold"
+            FontSize="22"
+            HorizontalOptions="Center"
+            Text="{extension:Translate Key=Title1}"
+            VerticalOptions="Center" />
+
+        <Label
+            FontAttributes="Bold"
+            FontSize="22"
+            HorizontalOptions="Center"
+            Text="{extension:Translate Key=Title2}"
+            VerticalOptions="Center" />
+
+
+        <VerticalStackLayout
+            Margin="0,20,0,0"
+            HorizontalOptions="CenterAndExpand"
+            RadioButtonGroup.GroupName="Country"
+            Spacing="5">
+            <RadioButton
+                x:Name="rbIndia"
+                CheckedChanged="rbIndia_CheckedChanged"
+                Content="India" />
+            <RadioButton
+                x:Name="rbNetherland"
+                CheckedChanged="rbNetherland_CheckedChanged"
+                Content="Netherland" />
+            <RadioButton
+                x:Name="rbUS"
+                CheckedChanged="rbUS_CheckedChanged"
+                Content="US" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.LazyView.LazyViewDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUISampleDemo.View.LazyView"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="LazyViewDemo">
+    <ScrollView Padding="12" VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout x:Name="LayoutContainer" Spacing="12">
+
+            <Label Style="{StaticResource Heading}" Text="This page demonstrates the LazyView. It instantiates 'MyView' in 3 different ways." />
+
+            <!--#region Page Initialization-->
+            <Label Style="{StaticResource Heading}" Text="With Page Initialization" />
+
+            <local:MyView Style="{StaticResource MyViewStyle}" />
+
+            <Line Style="{StaticResource HR}" />
+            <!--#endregion-->
+
+            <!--#region Lazy Loading After Page Activation-->
+            <Label Style="{StaticResource Heading}" Text="Lazy Loading After Page Activation" />
+            <Label Style="{StaticResource Heading}" Text="{Binding Source={x:Reference LazyActiviation}, Path=HasLazyViewLoaded, StringFormat='HasLazyViewLoaded = {0}'}" />
+            <local:CustomLazyView
+                x:Name="LazyActiviation"
+                x:TypeArguments="local:MyView"
+                Style="{StaticResource MyViewStyle}" />
+
+            <Line Style="{StaticResource HR}" />
+            <!--#endregion-->
+
+            <!--#region Lazy Loading Based On User Action-->
+            <Label Style="{StaticResource Heading}" Text="Lazy Loading Based On User Action" />
+            <Label Style="{StaticResource Heading}" Text="{Binding Source={x:Reference LazyUserAction}, Path=HasLazyViewLoaded, StringFormat='HasLazyViewLoaded = {0}'}" />
+            <Button
+                Clicked="LoadLazyView_Clicked"
+                IsVisible="{Binding Source={x:Reference LazyUserAction}, Path=HasLazyViewLoaded, Converter={mct:InvertedBoolConverter}}"
+                Text="Load View Now"
+                WidthRequest="200" />
+            <local:MyLazyView x:Name="LazyUserAction" Style="{StaticResource MyViewStyle}" />
+            <!--#endregion-->
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

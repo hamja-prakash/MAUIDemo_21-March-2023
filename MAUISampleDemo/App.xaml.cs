@@ -5,6 +5,7 @@ using Android.Content.Res;
 #endif
 
 using MAUISampleDemo.Helpers;
+using System.Globalization;
 
 namespace MAUISampleDemo;
 
@@ -45,8 +46,8 @@ public partial class App : Application
 #endif
         });
 
+        Translator.Instance.CultureInfo = new CultureInfo("en-US");
         MainPage = new AppShell();
         //MainPage = new FlyoutDemo();
     }
-
 }

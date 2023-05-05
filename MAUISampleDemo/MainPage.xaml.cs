@@ -2,6 +2,7 @@
 using MAUISampleDemo.View.CsharpMarkup;
 using MAUISampleDemo.View.Database;
 using MAUISampleDemo.View.FieldModifier;
+using MAUISampleDemo.View.LazyView;
 using MAUISampleDemo.ViewModels;
 using Mopups.Services;
 
@@ -70,7 +71,7 @@ public partial class MainPage : ContentPage
     {
         try
         {
-            NavigationPage(FrmScanner, new BarcodeScanner());
+            NavigationPage(FrmScanner, new View.BarcodeScannerDemo());
         }
         catch (Exception ex)
         {
@@ -748,6 +749,79 @@ public partial class MainPage : ContentPage
             var err = ex.Message;
         }
     }
+
+    private void FrmLazyView_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmLazyView, new LazyViewDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmBarcodeScnviaGoogleVision_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmBarcodeScnviaGoogleVision, new BarcodeScannerwithGoogleVisionDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmMultiLocalization_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmMultiLocalization, new MultiLanguageLocalizationDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmContextandMenuAcninlst_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmContextandMenuAcninlst, new ContextandMenuActioninListView());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmSkeletonEffect_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmSkeletonEffect, new SkeletonEffectDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmShowHideKeyboard_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmShowHideKeyboard, new Show_Hide_KeyboardDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -781,11 +855,8 @@ public partial class MainPage : ContentPage
         }
     }
 
-
-
-
-
-
     #endregion
+
+   
 }
 

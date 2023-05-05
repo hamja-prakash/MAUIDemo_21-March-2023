@@ -32,5 +32,7 @@
   <string>Need your face to unlock magic things</string>
   <key>NSLocationWhenInUseUsageDescription</key>
   <string>This apps shows your location on a map</string>
+  <key>NSCameraUsageDescription</key>
+  <string>Please let me use the camera for barcode scanning!</string>
 </dict>
 </plist>
