@@ -3,6 +3,7 @@ using BarcodeScanner.Mobile;
 using Camera.MAUI;
 using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Core;
+using FFImageLoading.Maui;
 using MAUISampleDemo.Helpers;
 using MAUISampleDemo.PlatformImplementations;
 using MAUISampleDemo.View;
@@ -33,6 +34,12 @@ public static class MauiProgram
             .UseSkiaSharp()
             .UseMauiCommunityToolkitMediaElement()
             .UseMauiCameraView()
+            .UseFFImageLoading()
+            .UseSentry(options =>
+            {
+                // The DSN is the only required setting.
+                options.Dsn = "https://6f49c41adfb947beaa59abcc8883ab93@o4505192262598656.ingest.sentry.io/4505225785311232";
+            })
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

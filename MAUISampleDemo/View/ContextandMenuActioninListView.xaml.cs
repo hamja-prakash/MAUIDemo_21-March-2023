@@ -1,3 +1,5 @@
+using MAUISampleDemo.Helpers;
+using System;
 using System.Collections.ObjectModel;
 
 namespace MAUISampleDemo.View;
@@ -25,8 +27,8 @@ public partial class ContextandMenuActioninListView : ContentPage
 			mFaculties.Add(new Faculty
 			{
 				Name = "Test 1",
-				Email = "test123@gmail.com"
-			});
+				Email = "test123@gmail.com",
+            });
 
             mFaculties.Add(new Faculty
             {
@@ -42,7 +44,7 @@ public partial class ContextandMenuActioninListView : ContentPage
 
             mFaculties.Add(new Faculty
             {
-                Name = "Test 4",
+                Name = "Data 4",
                 Email = "test14@gmail.com"
             });
 
@@ -83,4 +85,18 @@ public class Faculty
 {
 	public string Name { get; set; }
 	public string Email { get; set; }
+    public Color BackgroundColor
+    {
+        get => Common.GetRandomColor();
+
+    }
+    public char FirstCharOfName
+    {
+        get => !string.IsNullOrWhiteSpace(Name) ? Name.ToCharArray()[0] : ' ';
+    }
+
+    public char test()
+    {
+        return Name.ToCharArray()[0];
+    }
 }

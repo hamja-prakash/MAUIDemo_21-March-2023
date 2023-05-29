@@ -1,3 +1,5 @@
+using Sentry;
+
 namespace MAUISampleDemo.View;
 
 public partial class CustomiseControlwithHandlerDemo : ContentPage
@@ -14,5 +16,6 @@ public partial class CustomiseControlwithHandlerDemo : ContentPage
         CounterLabel.Text = $"Current count: {count}";
 
         SemanticScreenReader.Announce(CounterLabel.Text);
+        SentrySdk.CaptureMessage($"Count:{count}");
     }
 }

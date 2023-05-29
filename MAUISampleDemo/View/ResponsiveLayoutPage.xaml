@@ -18,11 +18,17 @@
             Grid.Column="0"
             Margin="0"
             HorizontalOptions="Fill"
+            Loaded="OnPlayPressed"
             ShouldAutoPlay="True"
             ShouldKeepScreenOn="True"
             ShouldLoopPlayback="True"
             ShouldShowPlaybackControls="False"
-            Source="embed://BigBuckBunny.mp4" />
+            Source="embed://videotest.mp4" />
+
+        <!--  Source="embed://BigBuckBunny.mp4"  -->
+        <!--  https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4  -->
+
+        <!--<WebView HeightRequest="400" Source="https://www.youtube.com/watch?v=WbuqICqCLtI" />-->
 
         <StackLayout
             HorizontalOptions="Center"

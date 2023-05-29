@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.FFImageDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Compat.Maui"
+    xmlns:svg="clr-namespace:FFImageLoading.Svg.Maui;assembly=FFImageLoading.Compat.Svg.Maui"
+    xmlns:transform="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Compat.Transformations"
+    Title="FFImageDemo">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" VerticalOptions="CenterAndExpand">
+            <ff:CachedImage
+                ErrorPlaceholder="error.png"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                LoadingPlaceholder="loadingbig.png"
+                Source="cat.jpeg" />
+
+            <svg:SvgCachedImage
+                ErrorPlaceholder="error.png"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                LoadingPlaceholder="loadingbig.png"
+                Source="instagram.png" />
+
+            <ff:CachedImage
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="dotnet_bot.svg">
+                <ff:CachedImage.Transformations>
+                    <transform:BlurredTransformation Radius="40" />
+                </ff:CachedImage.Transformations>
+            </ff:CachedImage>
+
+            <ff:CachedImage
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="loader.gif" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

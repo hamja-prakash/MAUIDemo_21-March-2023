@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.Stepper.VerticalStepperDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mauiStepper="clr-namespace:MauiStepper.Views;assembly=MauiStepper"
+    Title="VerticalStepperDemo">
+    <VerticalStackLayout Padding="10">
+        <mauiStepper:VerticalStepperView
+            x:Name="stepperView"
+            OnStepCancel="stepperView_OnStepCancel"
+            OnStepContinue="stepperView_OnStepContinue"
+            OnStepTapped="stepperView_OnStepTapped">
+            <mauiStepper:VerticalStepperView.Steps>
+                <mauiStepper:VerticalStepView Title="Step 1">
+                    <mauiStepper:VerticalStepView.Content>
+                        <VerticalStackLayout>
+                            <Label Text="Description 1" />
+                            <Label Text="Description 2" />
+                            <Label Text="Description 3" />
+                            <Label Text="Description 4" />
+                            <Label Text="Description 5" />
+                        </VerticalStackLayout>
+                    </mauiStepper:VerticalStepView.Content>
+                </mauiStepper:VerticalStepView>
+                <mauiStepper:VerticalStepView Title="Step 2">
+                    <mauiStepper:VerticalStepView.Content>
+                        <VerticalStackLayout>
+                            <Label Text="Description 1" />
+                            <Label Text="Description 2" />
+                            <Label Text="Description 3" />
+                            <Label Text="Description 4" />
+                            <Label Text="Description 5" />
+                        </VerticalStackLayout>
+                    </mauiStepper:VerticalStepView.Content>
+                </mauiStepper:VerticalStepView>
+                <mauiStepper:VerticalStepView Title="Step 3">
+                    <mauiStepper:VerticalStepView.Content>
+                        <VerticalStackLayout>
+                            <Label Text="Description 1" />
+                            <Label Text="Description 2" />
+                            <Label Text="Description 3" />
+                            <Label Text="Description 4" />
+                            <Label Text="Description 5" />
+                        </VerticalStackLayout>
+                    </mauiStepper:VerticalStepView.Content>
+                </mauiStepper:VerticalStepView>
+            </mauiStepper:VerticalStepperView.Steps>
+        </mauiStepper:VerticalStepperView>
+    </VerticalStackLayout>
+</ContentPage>

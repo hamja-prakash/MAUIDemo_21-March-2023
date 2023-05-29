@@ -32,13 +32,13 @@ public partial class App : Application
 #if __ANDROID__
             //handler.PlatformView.BackgroundTintList = ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
             handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
-            handler.PlatformView.TextCursorDrawable.SetTint(Colors.White.ToAndroid());
+            //handler.PlatformView.TextCursorDrawable.SetTint(Colors.White.ToAndroid());
 #elif __IOS__
             handler.PlatformView.BackgroundColor = UIKit.UIColor.Clear;
             handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
 #endif
         });
-
+        
         Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping(nameof(CustomEditor), (handler, view) =>
         {
 #if __ANDROID__

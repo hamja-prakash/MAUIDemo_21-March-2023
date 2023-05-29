@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using Microsoft.Maui.Graphics;
+using System.Text.RegularExpressions;
 
 namespace MAUISampleDemo.Helpers
 {
@@ -16,6 +17,20 @@ namespace MAUISampleDemo.Helpers
             Regex passwordRegExp = new Regex("((?=.*\\d)(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,16})");
             bool isPassword = passwordRegExp.IsMatch(value);
             return isPassword;
+        }
+
+        public static List<Color> _randomColorList = new List<Color>()
+        {
+            Colors.Orange,
+            Colors.Yellow,
+            Colors.Green,
+            Colors.Blue,
+            Colors.LightGray,
+        };
+
+        public static Color GetRandomColor()
+        {
+            return _randomColorList[new Random().Next(_randomColorList.Count())];
         }
     }
 }

@@ -56,14 +56,17 @@
 	  <None Remove="Resources\Fonts\fa-solid-900.ttf" />
 	  <None Remove="Resources\Fonts\OpenSans-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Sitka.ttc" />
+	  <None Remove="Resources\Images\Calendar.png" />
 	  <None Remove="Resources\Images\camera.png" />
 	  <None Remove="Resources\Images\cancel.png" />
 	  <None Remove="Resources\Images\cat.jpeg" />
+	  <None Remove="Resources\Images\Corner.png" />
 	  <None Remove="Resources\Images\dashboard_black.png" />
 	  <None Remove="Resources\Images\dashboard_white.png" />
 	  <None Remove="Resources\Images\down_arrow.png" />
 	  <None Remove="Resources\Images\earth.svg" />
 	  <None Remove="Resources\Images\empty.png" />
+	  <None Remove="Resources\Images\error.png" />
 	  <None Remove="Resources\Images\female.svg" />
 	  <None Remove="Resources\Images\flag.png" />
 	  <None Remove="Resources\Images\home.png" />
@@ -86,7 +89,11 @@
 	  <None Remove="Resources\Images\imgmenu.png" />
 	  <None Remove="Resources\Images\imgprofile.png" />
 	  <None Remove="Resources\Images\imgsearch.png" />
+	  <None Remove="Resources\Images\instagram.png" />
 	  <None Remove="Resources\Images\jupiter.svg" />
+	  <None Remove="Resources\Images\loader.gif" />
+	  <None Remove="Resources\Images\loading.png" />
+	  <None Remove="Resources\Images\loadingbig.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\male.svg" />
 	  <None Remove="Resources\Images\mars.svg" />
@@ -111,6 +118,7 @@
 	  <None Remove="Resources\Raw\dotnetbot.json" />
 	  <None Remove="Resources\Raw\dotnetbotanimation.json" />
 	  <None Remove="Resources\Raw\Products.json" />
+	  <None Remove="Resources\Raw\videotest.mp4" />
 	  <None Remove="View\Navigation\NavPage1.xaml~RF7c6c8.TMP" />
 	</ItemGroup>
 
@@ -131,6 +139,7 @@
 	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="3.1.0" />
 	  <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.2" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	  <PackageReference Include="FFImageLoadingCompat.Svg.Maui" Version="0.1.1" />
 	  <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
 	  <PackageReference Include="LiteDB" Version="5.0.16" />
 	  <PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.1" />
@@ -145,8 +154,10 @@
 	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
 	  <PackageReference Include="Plugin.Maui.ExpansionPanel" Version="1.0.3" />
 	  <PackageReference Include="Plugin.Maui.Popup" Version="1.0.5" />
+	  <PackageReference Include="Plugin.Maui.Stepper" Version="1.0.3" />
 	  <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
 	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+	  <PackageReference Include="Sentry.Maui" Version="3.31.0" />
 	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
 	  <PackageReference Include="SkiaSharp.Views" Version="2.88.3" />
 	  <PackageReference Include="sqlite-net-sqlcipher" Version="1.9.141-beta" />
@@ -280,6 +291,9 @@
 	  <MauiXaml Update="View\CustomizeLoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CustomizeUIwithKeyboard.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\CustomPickerControlDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -298,6 +312,9 @@
 	  <MauiXaml Update="View\DragandDropDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\DrawingViewDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\EmailAuthDashboradPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -314,6 +331,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ExpandandCollapseClvGroupDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\FFImageDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\FieldModifier\SecondPage.xaml">
@@ -425,6 +445,15 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\StateContainerViewDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Stepper\HorizontalStepperDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Stepper\StepperDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Stepper\VerticalStepperDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\WebviewDemo.xaml">

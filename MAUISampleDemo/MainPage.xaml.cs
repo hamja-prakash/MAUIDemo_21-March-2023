@@ -3,6 +3,7 @@ using MAUISampleDemo.View.CsharpMarkup;
 using MAUISampleDemo.View.Database;
 using MAUISampleDemo.View.FieldModifier;
 using MAUISampleDemo.View.LazyView;
+using MAUISampleDemo.View.Stepper;
 using MAUISampleDemo.ViewModels;
 using Mopups.Services;
 
@@ -822,6 +823,54 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private void FrmCstUIwithKyb_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCstUIwithKyb, new CustomizeUIwithKeyboard());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmStepper_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmStepper, new StepperDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmDrawingView_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmDrawingView, new DrawingViewDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmFFImage_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmFFImage, new FFImageDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -855,8 +904,9 @@ public partial class MainPage : ContentPage
         }
     }
 
+
     #endregion
 
-   
+    
 }
 

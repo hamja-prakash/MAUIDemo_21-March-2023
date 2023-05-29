@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Converters;
 using CommunityToolkit.Mvvm.Input;
+using Sentry;
 using System.Windows.Input;
 
 namespace MAUISampleDemo.ViewModels
@@ -49,6 +50,7 @@ namespace MAUISampleDemo.ViewModels
                 CurrentState = LayoutState.Loading;
                 await Task.Delay(2000);
                 CurrentState = LayoutState.Success;
+                SentrySdk.CaptureMessage("Hello Sentry");
             }
             catch (Exception ex)
             {

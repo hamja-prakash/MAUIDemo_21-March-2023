@@ -5,15 +5,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="ContextandMenuActioninListView">
     <ScrollView>
-        <Grid Margin="0,20">
-            <ListView
+        <Grid Margin="20">
+            <CollectionView
                 x:Name="lstFaculty"
                 HorizontalOptions="FillAndExpand"
                 SelectionMode="None"
                 VerticalOptions="FillAndExpand">
-                <ListView.ItemTemplate>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Detail="{Binding Email}" Text="{Binding Name}">
+                        <!--<TextCell Detail="{Binding Email}" Text="{Binding Name}">
                             <TextCell.ContextActions>
                                 <MenuItem
                                     Clicked="BtnDelete_Clicked"
@@ -21,10 +21,107 @@
                                     IsDestructive="True"
                                     Text="Delete" />
                             </TextCell.ContextActions>
-                        </TextCell>
+                        </TextCell>-->
+
+                        <Frame
+                            Margin="0,10"
+                            Padding="10"
+                            BorderColor="Gray"
+                            CornerRadius="10"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Grid
+                                Margin="5,0"
+                                Padding="0"
+                                ColumnSpacing="20"
+                                HorizontalOptions="FillAndExpand"
+                                RowSpacing="5"
+                                VerticalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Frame
+                                    Grid.Column="0"
+                                    Padding="0"
+                                    BackgroundColor="{Binding BackgroundColor}"
+                                    CornerRadius="25"
+                                    HeightRequest="50"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="50">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding FirstCharOfName}"
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center" />
+                                </Frame>
+
+                                <Grid Grid.Column="1" VerticalOptions="CenterAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid
+                                        Grid.Row="0"
+                                        Margin="0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand">
+                                        <!--<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                            <Label
+                                                Margin="0"
+                                                Padding="0"
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="First Name"
+                                                TextColor="#1ABC9C"
+                                                VerticalOptions="FillAndExpand" />-->
+                                        <Label
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="16"
+                                            HorizontalOptions="FillAndExpand"
+                                            Text="{Binding Name}"
+                                            TextColor="Black"
+                                            VerticalOptions="FillAndExpand" />
+                                        <!--</StackLayout>-->
+                                    </Grid>
+
+                                    <Grid
+                                        Grid.Row="1"
+                                        Margin="0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand">
+                                        <!--<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                            <Label
+                                                Margin="0"
+                                                Padding="0"
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                HorizontalOptions="FillAndExpand"
+                                                Text="Email"
+                                                TextColor="#1ABC9C"
+                                                VerticalOptions="FillAndExpand" />-->
+                                        <Label
+                                            Margin="0"
+                                            Padding="0"
+                                            FontSize="16"
+                                            HorizontalOptions="FillAndExpand"
+                                            Text="{Binding Email}"
+                                            TextColor="Black"
+                                            VerticalOptions="FillAndExpand" />
+                                        <!--</StackLayout>-->
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Frame>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Grid>
     </ScrollView>
 </ContentPage>

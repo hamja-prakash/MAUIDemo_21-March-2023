@@ -1,4 +1,5 @@
 using MAUISampleDemo.ViewModels;
+using Sentry;
 
 namespace MAUISampleDemo.View;
 
@@ -8,5 +9,6 @@ public partial class SkeletonEffectDemo : ContentPage
 	{
 		InitializeComponent();
 		this.BindingContext = new SkeletonEffectViewModel();
-	}
+       
+    }
 }

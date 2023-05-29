@@ -3,22 +3,129 @@
     x:Class="MAUISampleDemo.View.Show_Hide_KeyboardDemo"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Name="page"
     Title="Show_Hide_KeyboardDemo">
+
+    <!--#region Status Bar Styling-->
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="Black" StatusBarStyle="LightContent" />
+    </Page.Behaviors>
+    <!--#endregion-->
+
     <ScrollView>
         <VerticalStackLayout
             Margin="20"
             HorizontalOptions="FillAndExpand"
-            VerticalOptions="CenterAndExpand">
+            Spacing="20"
+            VerticalOptions="FillAndExpand">
+
+            <!--#region Gravatar Image Source-->
+            <Image HeightRequest="100">
+                <Image.Source>
+                    <toolkit:GravatarImageSource
+                        CacheValidity="1"
+                        CachingEnabled="True"
+                        Email="hamja3005@gmail.com" />
+                </Image.Source>
+            </Image>
+            <!--#endregion-->
+
+            <!--#region Animations-->
+            <Button Text="Click this Button">
+                <Button.Behaviors>
+                    <toolkit:AnimationBehavior EventName="Clicked">
+                        <toolkit:AnimationBehavior.AnimationType>
+                            <toolkit:FadeAnimation Opacity="0.8" />
+                        </toolkit:AnimationBehavior.AnimationType>
+                    </toolkit:AnimationBehavior>
+                </Button.Behaviors>
+            </Button>
+            <!--#endregion-->
+
+            <StackLayout
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                Spacing="5"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontFamily="Sitka"
+                    FontSize="16"
+                    Text="Full Name"
+                    TextColor="Black" />
+                <Frame
+                    Margin="0"
+                    Padding="10,0"
+                    BorderColor="Gray"
+                    CornerRadius="5"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <Entry
+                        x:Name="txtFullName"
+                        BackgroundColor="Transparent"
+                        FontFamily="Sitka"
+                        FontSize="16"
+                        Placeholder="Enter name"
+                        PlaceholderColor="LightGray"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand" />
+                </Frame>
+            </StackLayout>
+
             <Button
-                Clicked="BtnShowHideKeyboard_Clicked"
+                Clicked="BtnHideShowKeyboard_Clicked"
                 HorizontalOptions="CenterAndExpand"
                 Text="Show/Hide Keyboard"
                 VerticalOptions="FillAndExpand" />
 
-            <Entry
-                x:Name="Ent1"
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to .NET MAUI!" />
+            <!--#region Gradient-->
+            <Grid HeightRequest="100">
+                <Grid.Background>
+                    <!--<LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Offset="0.1" Color="Yellow" />
+                        <GradientStop Offset="0.2" Color="Green" />
+                        <GradientStop Offset="1.0" Color="Red" />
+                    </LinearGradientBrush>-->
+
+                    <RadialGradientBrush Center="0,0" Radius="0.8">
+                        <GradientStop Offset="0.1" Color="Yellow" />
+                        <!--<GradientStop Offset="0.2" Color="Green" />-->
+                        <GradientStop Offset="1.0" Color="Red" />
+                    </RadialGradientBrush>
+                </Grid.Background>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Avtarview-->
+            <toolkit:AvatarView
+                BackgroundColor="LightPink"
+                BorderColor="DeepSkyBlue"
+                BorderWidth="5"
+                CornerRadius="75"
+                FontSize="26"
+                HeightRequest="150"
+                Text="Test"
+                TextColor="DeepPink"
+                WidthRequest="150" />
+
+            <toolkit:AvatarView
+                CornerRadius="5,120,30,45"
+                HeightRequest="150"
+                ImageSource="flag.png"
+                WidthRequest="150" />
+            <!--#endregion-->
+
+            <toolkit:DrawingView
+                BackgroundColor="LightPink"
+                HeightRequest="300"
+                IsMultiLineModeEnabled="True"
+                LineColor="DeepSkyBlue"
+                LineWidth="5"
+                WidthRequest="300" />
+
         </VerticalStackLayout>
     </ScrollView>
 
