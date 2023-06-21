@@ -54,11 +54,17 @@
 	  <None Remove="Platforms\Android\TextFile.txt" />
 	  <None Remove="Resources\Fonts\fa-brands-400.ttf" />
 	  <None Remove="Resources\Fonts\fa-solid-900.ttf" />
+	  <None Remove="Resources\Fonts\MaterialIconsOutlined-Regular.ttf" />
 	  <None Remove="Resources\Fonts\OpenSans-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Sitka.ttc" />
+	  <None Remove="Resources\Fonts\Strande2.ttf" />
 	  <None Remove="Resources\Images\Calendar.png" />
 	  <None Remove="Resources\Images\camera.png" />
 	  <None Remove="Resources\Images\cancel.png" />
+	  <None Remove="Resources\Images\cartoonimg1.png" />
+	  <None Remove="Resources\Images\cartoonimg2.png" />
+	  <None Remove="Resources\Images\cartoonimg3.png" />
+	  <None Remove="Resources\Images\cartoonimg4.png" />
 	  <None Remove="Resources\Images\cat.jpeg" />
 	  <None Remove="Resources\Images\Corner.png" />
 	  <None Remove="Resources\Images\dashboard_black.png" />
@@ -132,10 +138,11 @@
 
 	<ItemGroup>
 	  <PackageReference Include="Acr.UserDialogs" Version="8.1.0-alpha-0009" />
+	  <PackageReference Include="akgul.Maui.DataGrid" Version="2.0.0" />
 	  <PackageReference Include="BarcodeScanner.Mobile.Maui" Version="6.3.0.25-pre" />
 	  <PackageReference Include="Camera.MAUI" Version="1.2.1" />
 	  <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.1.0" />
-	  <PackageReference Include="CommunityToolkit.Maui" Version="5.1.0" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="3.1.0" />
 	  <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.2" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
@@ -154,16 +161,19 @@
 	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
 	  <PackageReference Include="Plugin.Maui.ExpansionPanel" Version="1.0.3" />
 	  <PackageReference Include="Plugin.Maui.Popup" Version="1.0.5" />
+	  <PackageReference Include="Plugin.Maui.ScreenBrightness" Version="1.0.0-preview3" />
 	  <PackageReference Include="Plugin.Maui.Stepper" Version="1.0.3" />
 	  <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+	  <PackageReference Include="Plugin.ValidationRules" Version="1.5.0.1" />
 	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
 	  <PackageReference Include="Sentry.Maui" Version="3.31.0" />
 	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
 	  <PackageReference Include="SkiaSharp.Views" Version="2.88.3" />
+	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.3" />
+	  <PackageReference Include="SkiaSharp.Views.Maui.Core" Version="2.88.3" />
 	  <PackageReference Include="sqlite-net-sqlcipher" Version="1.9.141-beta" />
 	  <PackageReference Include="The49.Maui.BottomSheet" Version="1.0.0-alpha4" />
 	  <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
-	  <PackageReference Include="ZXing.Net.Maui" Version="0.3.0-preview.1" />
 	  <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.3.0-preview.1" />
 	</ItemGroup>
 
@@ -220,6 +230,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\BarcodeScannerwithGoogleVisionDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\BasicAnimationDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\BiometricsAuthDemo.xaml">
@@ -285,10 +298,16 @@
 	  <MauiXaml Update="View\CustomControlDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CustomImageborderDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\CustomiseControlwithHandlerDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\CustomizeLoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\CustomizeTitleBarDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\CustomizeUIwithKeyboard.xaml">
@@ -301,6 +320,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Database\CRUDoperationDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\DataGridDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Device_APPInfoPage.xaml">
@@ -325,6 +347,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Email_SMS_PhoneDialerDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\EventwithTimerDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ExpandableParagraphDemo.xaml">
@@ -393,6 +418,9 @@
 	  <MauiXaml Update="View\MultiLanguageLocalizationDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\MultiTargetingDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\MusicPlayDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -420,6 +448,12 @@
 	  <MauiXaml Update="View\PlatformSpecificCodeDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\ProgressBarDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ProgressbarwithTimerDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\RatingDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -435,10 +469,19 @@
 	  <MauiXaml Update="View\ScheduleListUIDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\ScreenBrightnessPopupPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ScreenSecurityDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\SemanticOrderViewDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Show_Hide_KeyboardDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SignUpUIDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\SkeletonEffectDemo.xaml">
@@ -456,12 +499,27 @@
 	  <MauiXaml Update="View\Stepper\VerticalStepperDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\Validations\Validation2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Validations\Validation3.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Validations\ValidationMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Validations\ValidationRulesDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\WebviewDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
+	  <PackageReference Include="Plugin.Maui.ScreenSecurity">
+	    <Version>1.0.0</Version>
+	  </PackageReference>
 	  <PackageReference Include="ZXing.Net.Maui">
 	    <Version>0.3.0-preview.1</Version>
 	  </PackageReference>
@@ -469,6 +527,12 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\MAUISampleDemo.Shared\MAUISampleDemo.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
+	  <PackageReference Include="Plugin.Maui.ScreenSecurity">
+	    <Version>1.0.0</Version>
+	  </PackageReference>
 	</ItemGroup>
 
 </Project>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.SignUpUIDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="SignUpUIDemo">
+    <!--  Main layout  -->
+    <Grid Padding="45" RowDefinitions="Auto,Auto,Auto,*,*,*">
+        <!--  Adding the gradient  -->
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0,1">
+                <GradientStop Offset="0.1" Color="#38b48d" />
+                <GradientStop Offset="1.0" Color="#04766f" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!--  Rounded images  -->
+        <Border
+            Grid.Row="0"
+            BackgroundColor="#ffdddf"
+            HeightRequest="100"
+            HorizontalOptions="Start"
+            Rotation="-7"
+            StrokeShape="RoundRectangle 10,10,10,10"
+            WidthRequest="100">
+            <Image Source="cartoonimg1.png" />
+        </Border>
+
+        <Border
+            Grid.Row="0"
+            Margin="0,-30,80,0"
+            BackgroundColor="#e5d8b3"
+            HeightRequest="90"
+            HorizontalOptions="End"
+            Rotation="10"
+            StrokeShape="RoundRectangle 10,10,10,10"
+            WidthRequest="90">
+            <Image Source="cartoonimg2.png" />
+        </Border>
+
+        <Border
+            Grid.Row="1"
+            Margin="-45,50,0,0"
+            BackgroundColor="#e8d4ff"
+            HeightRequest="140"
+            HorizontalOptions="Start"
+            Rotation="20"
+            StrokeShape="RoundRectangle 15,15,15,15"
+            WidthRequest="140">
+            <Image Source="cartoonimg3.png" />
+        </Border>
+
+        <Border
+            Grid.Row="1"
+            Margin="0,40,-40,40"
+            BackgroundColor="#ffe7ab"
+            HeightRequest="150"
+            HorizontalOptions="End"
+            Rotation="-15"
+            StrokeShape="RoundRectangle 10,10,10,10"
+            WidthRequest="150">
+            <Image Source="cartoonimg4.png" />
+        </Border>
+        <!--  Main title  -->
+        <Label
+            Grid.Row="2"
+            Margin="0,20"
+            FontAttributes="Bold"
+            FontSize="40"
+            Text="Let's get started!"
+            TextColor="White" />
+        <!--  Description  -->
+        <Label
+            Grid.Row="3"
+            FontAttributes="Bold"
+            FontSize="15"
+            LineHeight="1.3"
+            Text="Connect with each other with chatting or calling. Enjoy safe and private texting. "
+            TextColor="White" />
+        <!--  Join Button  -->
+        <Button
+            Grid.Row="4"
+            Margin="0,10,0,0"
+            BackgroundColor="White"
+            Clicked="Button_Clicked"
+            CornerRadius="10"
+            FontSize="14"
+            HeightRequest="50"
+            Text="Join Now"
+            TextColor="#04766f"
+            VerticalOptions="End" />
+        <!--  Login description  -->
+        <Label
+            Grid.Row="5"
+            Margin="0,10"
+            HorizontalOptions="CenterAndExpand"
+            TextColor="White">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Already have an account?  " />
+                    <Span FontAttributes="Bold" Text="Login" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </Grid>
+</ContentPage>

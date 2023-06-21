@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopup:PopupPage
+    x:Class="MAUISampleDemo.View.ScreenBrightnessPopupPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mopup="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+    Title="ScreenBrightnessPopupPage"
+    BackgroundColor="#80000000"
+    CloseWhenBackgroundIsClicked="True">
+    <mopup:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="700"
+            EasingIn="BounceOut"
+            PositionIn="Bottom"
+            PositionOut="Center"
+            ScaleIn="1"
+            ScaleOut="0.7" />
+    </mopup:PopupPage.Animation>
+
+    <VerticalStackLayout
+        Padding="30,0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="CenterAndExpand">
+        <Label
+            x:Name="brightnessLabel"
+            Margin="20,0"
+            FontAttributes="Bold"
+            FontSize="18" />
+
+        <Slider
+            x:Name="brightnessSlider"
+            Margin="0,10,0,0"
+            ValueChanged="Slider_ValueChanged" />
+
+    </VerticalStackLayout>
+
+</mopup:PopupPage>

@@ -5,6 +5,7 @@ using Android.Content.Res;
 #endif
 
 using MAUISampleDemo.Helpers;
+using MAUISampleDemo.View;
 using System.Globalization;
 
 namespace MAUISampleDemo;
@@ -49,5 +50,6 @@ public partial class App : Application
         Translator.Instance.CultureInfo = new CultureInfo("en-US");
         MainPage = new AppShell();
         //MainPage = new FlyoutDemo();
+        // let's set the initial theme already during the app start
     }
 }

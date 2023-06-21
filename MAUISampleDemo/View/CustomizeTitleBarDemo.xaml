@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.CustomizeTitleBarDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CustomizeTitleBarDemo"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground},
+                                      Dark={StaticResource DarkBackground}}"
+    Shell.BackgroundColor="DarkGreen"
+    Shell.NavBarIsVisible="True">
+
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill">
+            <Label
+                FontFamily="Strande2"
+                FontSize="20"
+                HeightRequest="50"
+                Text="TitleBar"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center" />
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="BtnAppThemeMode_Clicked" Order="Primary">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="MaterialIconsOutlined-Regular" Glyph="&#xe51c;" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem Clicked="BtnBrightness_Clicked" Order="Primary">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="MaterialIconsOutlined-Regular"
+                    Glyph="&#xe518;"
+                    Color="LightPink" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+
+        <ToolbarItem Order="Secondary" Text="Item 3" />
+        <ToolbarItem Order="Secondary" Text="Item 4" />
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to .NET MAUI!"
+            TextColor="{StaticResource BaseLabel}"
+            VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

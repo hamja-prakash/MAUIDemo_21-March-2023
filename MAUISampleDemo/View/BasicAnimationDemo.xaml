@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.BasicAnimationDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="BasicAnimationDemo">
+
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[ 
+            ^contentpage {
+            background-color: lightpink;
+            }
+            stacklayout {
+            -maui-spacing: 6;
+            margin: 40;
+            }
+
+            grid {
+            row-gap: 6;
+            column-gap: 6;
+            }
+
+            stacklayout > image {
+            height: 200;
+            width: 200;
+            }
+      ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Spacing="20">
+            <Label HorizontalOptions="Center" Text="Fade Animation" />
+            <ImageButton
+                x:Name="imgFade"
+                BackgroundColor="Transparent"
+                Clicked="imgFade_Clicked"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="dotnet_bot.png" />
+
+            <Label HorizontalOptions="Center" Text="Rotation Animation" />
+            <ImageButton
+                x:Name="imgRotation"
+                BackgroundColor="Transparent"
+                Clicked="imgRotation_Clicked"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="dotnet_bot.png" />
+
+            <Label HorizontalOptions="Center" Text="Horizantal Rotation Animation" />
+            <ImageButton
+                x:Name="imgHrRotation"
+                BackgroundColor="Transparent"
+                Clicked="imgHrRotation_Clicked"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="dotnet_bot.png" />
+
+            <Label HorizontalOptions="Center" Text="Vertical Rotation Animation" />
+            <ImageButton
+                x:Name="imgVrRotation"
+                BackgroundColor="Transparent"
+                Clicked="imgVrRotation_Clicked"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="dotnet_bot.png" />
+
+            <Label HorizontalOptions="Center" Text="Scale Animation" />
+            <ImageButton
+                x:Name="imgScale"
+                BackgroundColor="Transparent"
+                Clicked="imgScale_Clicked"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="dotnet_bot.png" />
+
+            <Label HorizontalOptions="Center" Text="Translate Animation" />
+            <ImageButton
+                x:Name="imgTranslate"
+                BackgroundColor="Transparent"
+                Clicked="imgTranslate_Clicked"
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="dotnet_bot.png" />
+
+            <Button Clicked="BtnStartAnimation_Clicked" Text="Start Animation" />
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

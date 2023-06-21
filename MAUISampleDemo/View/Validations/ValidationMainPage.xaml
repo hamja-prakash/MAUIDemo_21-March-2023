@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.Validations.ValidationMainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ValidationMainPage">
+    <ScrollView
+        Grid.Row="1"
+        HorizontalScrollBarVisibility="Never"
+        VerticalScrollBarVisibility="Never">
+        <Grid
+            Grid.Row="1"
+            Margin="0,20"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="20"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--#region Validation 1-->
+            <Frame
+                x:Name="FrmValidation1"
+                Grid.Row="0"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Validation 1 Demo"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmValidation1_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+            <!--#endregion-->
+
+            <!--#region Validation 2-->
+            <Frame
+                x:Name="FrmValidation2"
+                Grid.Row="1"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Validation 2 Demo"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmValidation2_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+            <!--#endregion-->
+
+            <!--#region Validation 3-->
+            <Frame
+                x:Name="FrmValidation3"
+                Grid.Row="2"
+                Margin="20,0"
+                Padding="0"
+                BackgroundColor="Green"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Validation 3 Demo"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FrmValidation3_Tapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+            <!--#endregion-->
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUISampleDemo.View.CustomImageborderDemo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CustomImageborderDemo">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="gradient" EndPoint="0,1">
+                <GradientStop Offset="0" Color="#6C06E6" />
+                <GradientStop Offset="1" Color="#FF228b" />
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Margin="20">
+            <Border
+                HeightRequest="200"
+                Stroke="{StaticResource gradient}"
+                StrokeThickness="10"
+                WidthRequest="200">
+                <Image Source="pet.png" />
+            </Border>
+
+            <Border
+                HeightRequest="200"
+                Stroke="{StaticResource gradient}"
+                StrokeThickness="10"
+                WidthRequest="200">
+                <Border.StrokeShape>
+                    <Ellipse />
+                </Border.StrokeShape>
+                <Image Source="pet.png" />
+            </Border>
+
+            <Border
+                HeightRequest="200"
+                Stroke="{StaticResource gradient}"
+                StrokeThickness="10"
+                WidthRequest="200">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="40,0,0,40" />
+                </Border.StrokeShape>
+                <Image Source="pet.png" />
+            </Border>
+
+            <Border
+                HeightRequest="200"
+                Stroke="{StaticResource gradient}"
+                StrokeThickness="10"
+                WidthRequest="200">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="40,40,40,40" />
+                </Border.StrokeShape>
+                <Image Source="pet.png" />
+            </Border>
+
+            <Border
+                HeightRequest="100"
+                Stroke="{StaticResource gradient}"
+                StrokeShape="Path M11.7704 1.09511C11.9174 1.03421 12.0826 1.03421 12.2296 1.09511L19.5486 4.12672C19.6956 4.18761 19.8124 4.30442 19.8733 4.45144L22.9049 11.7704C22.9658 11.9174 22.9658 12.0826 22.9049 12.2296L19.8733 19.5486C19.8124 19.6956 19.6956 19.8124 19.5486 19.8733L12.2296 22.9049C12.0826 22.9658 11.9174 22.9658 11.7704 22.9049L4.45144 19.8733C4.30442 19.8124 4.18761 19.6956 4.12672 19.5486L1.09511 12.2296C1.03421 12.0826 1.03421 11.9174 1.09511 11.7704L4.12672 4.45144C4.18761 4.30442 4.30442 4.18761 4.45144 4.12672L11.7704 1.09511Z"
+                StrokeThickness="10"
+                WidthRequest="100">
+                <Image Source="pet.png" />
+            </Border>
+
+            <Frame
+                Margin="0"
+                Padding="0"
+                BackgroundColor="LightBlue"
+                BorderColor="Black"
+                CornerRadius="5"
+                HeightRequest="45"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Entry
+                    Margin="5,0"
+                    ClearButtonVisibility="WhileEditing"
+                    CursorPosition="3"
+                    FontFamily="Sitka"
+                    FontSize="16"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="True"
+                    Placeholder="Enter first name"
+                    PlaceholderColor="Black"
+                    SelectionLength="5"
+                    Text="Hello people!"
+                    TextColor="Black" />
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

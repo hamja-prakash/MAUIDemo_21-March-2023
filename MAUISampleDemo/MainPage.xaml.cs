@@ -4,6 +4,7 @@ using MAUISampleDemo.View.Database;
 using MAUISampleDemo.View.FieldModifier;
 using MAUISampleDemo.View.LazyView;
 using MAUISampleDemo.View.Stepper;
+using MAUISampleDemo.View.Validations;
 using MAUISampleDemo.ViewModels;
 using Mopups.Services;
 
@@ -871,6 +872,139 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private void FrmCustomImgBrd_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCustomImgBrd, new CustomImageborderDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    [Obsolete]
+    private void FrmEventWithTimer_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmEventWithTimer, new EventwithTimerDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmValidationRules_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmValidationRules, new ValidationMainPage());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmSignUpUI_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmSignUpUI, new SignUpUIDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void Frmdatagrid_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(Frmdatagrid, new DataGridDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmScreenSecurity_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmScreenSecurity, new ScreenSecurityDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmBasicAnimation_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmBasicAnimation, new BasicAnimationDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmCustomizeTitlebar_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmCustomizeTitlebar, new CustomizeTitleBarDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmProgressbar_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmProgressbar, new ProgressBarDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmMultiTarget_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmMultiTarget, new MultiTargetingDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
+    private void FrmPrgwithTimer_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            NavigationPage(FrmPrgwithTimer, new ProgressbarwithTimerDemo());
+        }
+        catch (Exception ex)
+        {
+            var err = ex.Message;
+        }
+    }
+
     //private async void FrmBiometricsAuth_Tapped(object sender, EventArgs e)
     //{
     //    try
@@ -903,7 +1037,6 @@ public partial class MainPage : ContentPage
             var err = ex.Message;
         }
     }
-
 
     #endregion
 

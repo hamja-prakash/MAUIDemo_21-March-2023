@@ -16,6 +16,7 @@ using Microsoft.Maui.LifecycleEvents;
 using Mopups.Hosting;
 using Plugin.LocalNotification;
 using SkiaSharp.Views.Maui.Controls.Hosting;
+using SkiaSharp.Views.Maui.Handlers;
 using ZXing.Net.Maui;
 using ZXing.Net.Maui.Controls;
 
@@ -35,6 +36,7 @@ public static class MauiProgram
             .UseMauiCommunityToolkitMediaElement()
             .UseMauiCameraView()
             .UseFFImageLoading()
+            .UseProgressBar()
             .UseSentry(options =>
             {
                 // The DSN is the only required setting.
@@ -48,6 +50,8 @@ public static class MauiProgram
                 fonts.AddFont("fa-solid-900.ttf", "FAS");
                 fonts.AddFont("OpenSans-Bold.ttf", "OpenSansBold");
                 fonts.AddFont("Sitka.ttf", "Sitka");
+                fonts.AddFont("MaterialIcons-Regular.ttf", "MaterialIcons-Regular");
+                fonts.AddFont("Strande2.ttf", "Strande2");
             })
             .ConfigureLifecycleEvents(events =>
             {

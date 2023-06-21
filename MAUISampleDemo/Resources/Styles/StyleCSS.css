@@ -1,0 +1,18 @@
+﻿^contentpage {
+    background-color: lightpink;
+}
+
+stacklayout {
+    -maui-spacing: 6;
+    margin: 40;
+}
+
+grid {
+    row-gap: 6;
+    column-gap: 6;
+}
+
+stacklayout > image {
+    height: 200;
+    width: 200;
+}
